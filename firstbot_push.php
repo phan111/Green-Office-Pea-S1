@@ -55,8 +55,8 @@
 	}
 	function push()
 	{
-		$access_token = 'HScoQtJ9WeTsUePpz0xZ7vo//Tm7j+PR/LCoi09r4L7XDPJVZr/Bc3iSn6NGBJVa8LpQM446o/uIUbLxOfjm09FDX+73peOuXqHvKttcHLeqogyWj0RU/Vqj1LapFoxfp2lOPYq4O8ErqPnZGyRpPAdB04t89/1O/w1cDnyilFU=';
-        $id = 'Ua9ba6c25071c19588c095ec147efe2b1';
+		$access_token = 'JlqfkhQinH+BmTxFyFOyOjMLtiPY33oUH49gMD8yae2yvLBcbJiREM5kMAyCt263s+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGa/GWbx7fbjB+DdkCjrZsQWkflrBHhdsazEIeblZh3wtgdB04t89/1O/w1cDnyilFU=';
+        $id = 'C382493842e4723468628814a2d4e8a5c';
 		//$messages = [ 'type' => 'text','text' => "jdakljkskljd"];
 		$messages = flex_msg();
         $url = 'https://api.line.me/v2/bot/message/push';
