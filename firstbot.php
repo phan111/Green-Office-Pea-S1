@@ -1,7 +1,8 @@
 <?php
 	function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
 	{
-		$access_token = 'elxUGK+c1zdACtR4hLn35sfHWpQxoo/11foAHqH422FIOw+LtS/sUlHBlqe47Seis+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGadizAdmQpnGOy7PbKeCFInpiPtlkcOdlz2HQJjbwr7SgdB04t89/1O/w1cDnyilFU=';
+		$access_token = 'JlqfkhQinH+BmTxFyFOyOjMLtiPY33oUH49gMD8yae2yvLBcbJiREM5kMAyCt263s+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGa/GWbx7fbjB+DdkCjrZsQWkflrBHhdsazEIeblZh3wtgdB04t89/1O/w1cDnyilFU=
+';
 		$messages = ['type' => 'text','text' => $txtin];//สร้างตัวแปร 
 		$url = 'https://api.line.me/v2/bot/message/reply';
 		$data = [
@@ -26,7 +27,6 @@
 	$events = json_decode($content, true);//แปลง json เป็น php
 	if (!is_null($events['events'])) //check ค่าในตัวแปร $events
 	{
-		echo "BOT OK";
 		foreach ($events['events'] as $event) {
 			if ($event['type'] == 'message' && $event['message']['type'] == 'text')
 			{
@@ -37,4 +37,5 @@
 			}
 		}
 	}
+	echo "BOT OK";
 	
