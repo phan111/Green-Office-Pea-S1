@@ -22,7 +22,7 @@
 											  },
 									"hero": {
 												"type": "image",
-												"url": "https://meetingnotify.herokuapp.com/pic/the-assist.png",
+												"url": "https://github.com/phan111/Green-Office-Pea-S1/blob/master/logo-PEA.png",
 												"size": "full",
 												"aspectRatio": "20:13",
 												"aspectMode": "cover"
