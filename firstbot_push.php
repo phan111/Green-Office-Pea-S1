@@ -22,7 +22,7 @@
 											  },
 									"hero": {
 												"type": "image",
-												"url": "https://github.com/phan111/Green-Office-Pea-S1/blob/master/logo-PEA.png",
+												"url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/logo-PEA.png",
 												"size": "full",
 												"aspectRatio": "20:13",
 												"aspectMode": "cover"
