@@ -1,4 +1,5 @@
 <?php
+	include 'connect.php';
 	function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
 	{
 		$access_token = 'JlqfkhQinH+BmTxFyFOyOjMLtiPY33oUH49gMD8yae2yvLBcbJiREM5kMAyCt263s+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGa/GWbx7fbjB+DdkCjrZsQWkflrBHhdsazEIeblZh3wtgdB04t89/1O/w1cDnyilFU=';
@@ -32,7 +33,7 @@
 				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-				reply_msg($content,$replyToken);      
+				reply_msg($content,$txtin);      
 			}
 		}
 	}
