@@ -3,7 +3,7 @@
 $sql="SELECT * FROM line_reply";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-printf ("%s (%s)\n",$row[0],$row[1]);
+echo "reply: ".$row['reply'];
 	function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
 	{
 		$access_token = 'JlqfkhQinH+BmTxFyFOyOjMLtiPY33oUH49gMD8yae2yvLBcbJiREM5kMAyCt263s+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGa/GWbx7fbjB+DdkCjrZsQWkflrBHhdsazEIeblZh3wtgdB04t89/1O/w1cDnyilFU=';
