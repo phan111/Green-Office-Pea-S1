@@ -37,7 +37,129 @@
 				$result=mysqli_query($con, $sql);
 				$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 				$ans = $row['reply'];
-				reply_msg($ans,$replyToken);      
+				//reply_msg($ans,$replyToken);
+					$json1 = '{
+				"type":"flex",
+				"altText":"PQ PEAS1",
+				"contents":{
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://pqlibrary.herokuapp.com/IMG1360550178.png",
+    "size": "full",
+    "aspectRatio": "16:9",
+    "aspectMode": "fit",
+    "action": {
+      "type": "uri",
+      "uri": "http://linecorp.com/"
+    }
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "All Results",
+        "weight": "bold",
+        "size": "xl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "'.$ans.'",
+                "wrap": true,
+                "color": "#666666",
+                "size": "md",
+                "flex": 5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "'.$btn_txt.'",
+          "uri": "'.$url.'"
+        }
+      },
+     
+      {
+        "type": "spacer",
+        "size": "sm"
+      }
+    ],
+    "flex": 0
+  }
+},
+	"quickReply": {
+             "items": [
+                {
+                 "type": "action",
+                 "action": {
+                    "type": "message",
+                    "label": "Manual",
+                    "text": "Manual"
+                   }
+                } ,
+				{
+                 "type": "action",
+                 "action": {
+                    "type": "message",
+                    "label": "Keyword",
+                    "text": "Keyword"
+                   }
+                } ,
+				{
+				 "type": "action",
+                 "action": {
+                    "type": "message",
+                    "label": "PQ",
+                    "text": "PQ"
+                   }
+                } ,
+				{
+                 "type": "action",
+                 "action": {
+                    "type": "message",
+                    "label": "Voltage Dip",
+                    "text": "Voltage Dip"
+                   }
+				},
+ 				{
+                 "type": "action",
+                 "action": {
+                    "type": "message",
+                    "label": "Harmonic",
+                    "text": "Harmonic"
+                   }
+                } 			
+               ]
+            }
+	}';
+	$result = json_decode($json1);
+	return $result;
 			}
 		}
 	}
