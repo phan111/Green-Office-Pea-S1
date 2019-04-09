@@ -1,7 +1,7 @@
 <?php
 	include 'connect.php';
 $sql="SELECT * FROM line_reply";
-$result=mysqli_query($con,$sql);
+$result=mysqli_query($sql);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 echo "reply: ".$row['reply'];
 	function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
