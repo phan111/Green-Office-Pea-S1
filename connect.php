@@ -1,6 +1,6 @@
 <?php
   $server = "us-cdbr-iron-east-03.cleardb.net";
-  $username = "	bcc62c80f44ddb";
+  $username = "bcc62c80f44ddb";
   $password = "13c350a1";
   $db = "heroku_31f1dcbaacb6adb";
   $conn = new mysqli($server, $username, $password, $db);
