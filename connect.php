@@ -1,5 +1,5 @@
 <?php
-$server = "us-cdbr-iron-east-01.cleardb.net";
+$server = "us-cdbr-iron-east-03.cleardb.net";
   $username = "	bcc62c80f44ddb";
   $password = "13c350a1";
   $db = "heroku_31f1dcbaacb6adb";
