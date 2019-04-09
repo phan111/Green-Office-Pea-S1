@@ -1,5 +1,6 @@
 <?php
 	include 'connect.php';
+echo "string";
 $sql="SELECT * FROM line_reply";
 $result=mysqli_query($con,$sql);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
