@@ -38,6 +38,7 @@
 				$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 				$ans = $row['reply'];
 				reply_msg($ans,$replyToken);
+			}
 		}
 	}
 	echo "BOT OK";
