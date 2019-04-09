@@ -159,7 +159,7 @@
             }
 	}';
 	$result = json_decode($json1);
-	return $result;
+	reply_msg($result);
 			}
 		}
 	}
