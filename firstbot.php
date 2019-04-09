@@ -1,5 +1,12 @@
 <?php
 	include 'connect.php';
+	   if (mysqli_num_rows($result) > 0) {
+      while($row = mysqli_fetch_assoc($result)) {
+         echo "reply: " . $row["reply"]. "<br>";
+      }
+   } else {
+      echo "0 results";
+   }
 	function reply_msg($txtin,$replyToken)//สร้างข้อความและตอบกลับ
 	{
 		$access_token = 'JlqfkhQinH+BmTxFyFOyOjMLtiPY33oUH49gMD8yae2yvLBcbJiREM5kMAyCt263s+MG0mew1M1Sak1073mHbHkRMvayt9UhvofIOBtfIGa/GWbx7fbjB+DdkCjrZsQWkflrBHhdsazEIeblZh3wtgdB04t89/1O/w1cDnyilFU=';
