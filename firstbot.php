@@ -87,7 +87,7 @@
         "action": {
           "type": "uri",
           "label": "button",
-          "uri": "https://google.co.th"
+          "uri": "http://linecorp.com/"
         }
       },
      
