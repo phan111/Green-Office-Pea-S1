@@ -31,7 +31,7 @@
   						"type": "bubble",
   						"hero": {
    								 "type": "image",
-    								 "url": "https://drive.google.com/file/d/1omOjXhDpAx9Jtkp36niv_aoAO1FjIdiO/view",
+    								 "url": "https://github.com/phan111/Green-Office-Pea-S1/blob/master/LOGO-Green-Office-PEA-S1-final.png",
     								 "size": "full",
       							         "aspectRatio": "16:9",
     								 "aspectMode": "fit",
