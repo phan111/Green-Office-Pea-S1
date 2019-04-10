@@ -31,13 +31,13 @@
   						"type": "bubble",
   						"hero": {
    								 "type": "image",
-    								 "url": "https://pqlibrary.herokuapp.com/IMG1360550178.png",
+    								 "url": "https://drive.google.com/file/d/1omOjXhDpAx9Jtkp36niv_aoAO1FjIdiO/view",
     								 "size": "full",
       							         "aspectRatio": "16:9",
     								 "aspectMode": "fit",
     								 "action": {
       	   									"type": "uri",
-      										"uri": "http://linecorp.com/"
+      										"uri": "line://app/1556091170-O9nZo3E3"
     									   }
   							},
   						"body": {
@@ -87,7 +87,7 @@
 										"action": {
 										  "type": "uri",
 										  "label": "button",
-										  "uri": "line://app/1556091170-PyGBDryr"
+										  "uri": "line://app/1556091170-O9nZo3E3"
 										}
 						      			     },
      
