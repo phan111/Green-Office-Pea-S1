@@ -87,7 +87,7 @@
 										"action": {
 										  "type": "uri",
 										  "label": "button",
-										  "uri": "http://linecorp.com/"
+										  "uri": "line://app/1556091170-PyGBDryr"
 										}
 						      			     },
      
