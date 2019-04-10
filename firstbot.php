@@ -37,7 +37,7 @@
 				$result = mysqli_query($con, $sql);
 				$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 				$ans = $row['reply'];
-				reply_msg($flex,$replyToken);
+				reply_msg($ans ,$replyToken);
 			}
 		}
 	}
