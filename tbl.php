@@ -3,7 +3,7 @@ include 'connect.php';
 echo $_GET['tbl'];
 $sql = "SELECT * FROM ".$_GET['tbl']
 echo '<pre>';
-$resource = $con->query('SELECT * FROM table WHERE 1');
+$resource = $con->query($sql);
 while ( $rows = $resource->fetch_assoc() ) {
     print_r($rows);//echo "{$row['field']}";
 }
