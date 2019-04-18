@@ -8,6 +8,11 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 ";
 echo '<pre>';
 $resource = $con->query($sql);
+if($resource){
+    echo 'yes';
+}else{
+    echo 'no';
+}
 while ( $rows = $resource->fetch_assoc() ) {
     print_r($rows);//echo "{$row['field']}";
 }
