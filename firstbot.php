@@ -26,12 +26,12 @@
 	{
 		$json1 = '{
 				"type":"flex",
-				"altText":"PQ PEAS1",
+				"altText":"Green Office",
 				"contents":{
   						"type": "bubble",
   						"hero": {
    								 "type": "image",
-    								 "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/LOGO-Green-Office-PEA-S1-final.png",
+    								 "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/Webp.net-resizeimage.png",
     								 "size": "full",
       							         "aspectRatio": "16:9",
     								 "aspectMode": "fit",
