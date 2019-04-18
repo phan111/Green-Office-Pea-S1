@@ -63,9 +63,9 @@
             													"contents": [
 															      {
 																"type": "text",
-																"text": "test",
+																"text": "",
 																"wrap": true,
-																"color": "#666666",
+																"color": "#d4ed89",
 																"size": "md",
 																"flex": 5
 															      }
@@ -117,9 +117,9 @@
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				$sql = "SELECT * FROM line_reply WHERE msg LIKE '".$txtin."'";
 				$result = mysqli_query($con, $sql);
-				$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+				$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 				$ans = $row['reply'];
-				reply_msg($ans,$replyToken);
+				reply_msg($ans, $replyToken);
 			}
 		}
 	}
