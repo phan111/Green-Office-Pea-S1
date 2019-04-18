@@ -3,7 +3,7 @@ include 'connect.php';
 echo $_GET['tbl'];
 $sql = "SELECT * FROM ".$_GET['tbl']
 echo '<pre>';
-$result = $db->query($sql);
+$result = $con->query($sql);
 if($result->num_rows>0){
     while ($row = $result->fetch_object()) {
         foreach ($row as $r){
