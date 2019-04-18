@@ -26,7 +26,7 @@
 	{
 	$json1 = '{
 				"type":"flex",
-				"altText":"Green Office",
+				"altText":"การโต้ตอบของบอท",
 				"contents":{
   						"type": "bubble",
   						"hero": {
@@ -63,10 +63,10 @@
             													"contents": [
 															      {
 																"type": "text",
-																"text": "...",
+																"text": "Green Office Bot",
 																"wrap": true,
 																"color": "#d4ed89",
-																"size": "md",
+																"size": "sm",
 																"flex": 5
 															      }
             														   ]
@@ -122,7 +122,7 @@
 					FROM keyword k
 					INNER JOIN detail d
 					ON k.keyword_id = d.keyword_id
-					WHERE keyword LIKE '%Greenofficeนโยบายกรีน%'
+					WHERE keyword LIKE '%'.$txtin.'%'
 				";
 				$resource = $con->query($sql);
 				$ans = array();
