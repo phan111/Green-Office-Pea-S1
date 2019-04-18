@@ -46,7 +46,7 @@
     								"contents": [
       										{
         										"type": "text",
-        										"text": "'.$row['reply'].'",
+        										"text": "'.$ans['reply'].'",
         										"weight": "bold",
         										"size": "xl"
       										},
