@@ -7,7 +7,7 @@ $result = $con->query($sql);
 if($result->num_rows>0){
     while ($row = $result->fetch_object()) {
         foreach ($row as $r){
-            echo $r.'<br>';
+            print_r($r);
         }
     }
 }
