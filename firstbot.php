@@ -46,7 +46,7 @@
     								"contents": [
       										{
         										"type": "text",
-        										"text": "'.$ans['reply'].'",
+        										"text": "'.$ans[0]['reply'].'",
         										"weight": "bold",
         										"size": "xl"
       										},
@@ -116,9 +116,13 @@
 				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				$sql = "SELECT * FROM line_reply WHERE msg = '".$txtin."'";
-				$result = mysqli_query($con, $sql);
-				$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-				reply_msg($row, $replyToken);
+				$resource = $con->query($sql);
+				$ans = array();
+				while ( $rows = $resource->fetch_assoc() ) {
+				    $ans[] = $rows;
+				    //print_r($rows);//echo "{$row['field']}";
+				}
+				reply_msg($ans, $replyToken);
 			}
 		}
 	}
