@@ -9,14 +9,12 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 ";
 echo '<pre>';
 $resource = $con->query($sql);
-if($resource){
-    echo 'yes';
-}else{
-    echo 'no';
-}
+$ans = array();
 while ( $rows = $resource->fetch_assoc() ) {
-    print_r($rows);//echo "{$row['field']}";
+    array_push($ans, $row);
+    //print_r($rows);//echo "{$row['field']}";
 }
+print_r($ans);
 $resource->free();
 $db->close();
 echo '</pre>';
