@@ -46,7 +46,7 @@
     								"contents": [
       										{
         										"type": "text",
-        										"text": "'.$ans.'",
+        										"text": "'.$row['reply'].'",
         										"weight": "bold",
         										"size": "xl"
       										},
@@ -118,8 +118,7 @@
 				$sql = "SELECT * FROM line_reply WHERE msg = '".$txtin."'";
 				$result = mysqli_query($con, $sql);
 				$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-				$ans = $row['reply'];
-				reply_msg($ans, $replyToken);
+				reply_msg($row, $replyToken);
 			}
 		}
 	}
