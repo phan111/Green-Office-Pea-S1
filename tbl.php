@@ -3,14 +3,13 @@ include 'connect.php';
 echo $_GET['tbl'];
 $sql = "SELECT * FROM ".$_GET['tbl']
 echo '<pre>';
-$result = $con->query($sql);
-if($result->num_rows>0){
-    while ($row = $result->fetch_object()) {
-        print_r($row);
-    }
+$resource = $con->query('SELECT * FROM table WHERE 1');
+while ( $rows = $resource->fetch_assoc() ) {
+    print_r($rows);//echo "{$row['field']}";
 }
-/*$sql = "SELECT * FROM ".$_GET['tbl'];
-$result = mysqli_query($con, $sql);
+$resource->free();
+$db->close();
+/*$result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 print_r($row);
 foreach($row as $key){
