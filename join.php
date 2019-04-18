@@ -2,9 +2,9 @@
 <?php
 include 'connect.php';
 echo $_GET['tbl'];
-$sql = "SELECT keyword.keyword_id, keyword.keyword, keyword.topic, detail.detail_id, detail.subtopic, detail.reply 
-        FROM keyword 
-        INNER JOIN detail 
+$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
+        FROM keyword k
+        INNER JOIN detail d
         ON keyword.keyword_id = detail.keyword_id
 ";
 echo '<pre>';
