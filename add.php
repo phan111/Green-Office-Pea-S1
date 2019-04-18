@@ -1,31 +1,39 @@
 <?php
 include 'connect.php';
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (13, 'โรงแรมสีเขียว', 'line://app/1556091170-BXpwyLjL', 7)";
+VALUES (17, 'ก๊าซเรือนกระจกตัวการโลกร้อน', 'line://app/1556091170-8AR3jDMD', 8)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (14, 'ฉลากสินค้า', 'line://app/1556091170-DyZRqdYd', 7)";
+VALUES (18, 'แหล่งปล่อยก๊าซเรือนกระจก', 'line://app/1556091170-RXg2Vknk', 8)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (15, 'ฉลากเขียว', 'line://app/1556091170-6r4kb0G0', 7)";
+VALUES (19, 'ปรากฎการณ์เรือนกระจก', 'line://app/1556091170-nj7xbywy', 8)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (16, 'โรงแรมใบไม้เขียว', 'line://app/1556091170-wan4djNj', 7)";
+VALUES (20, 'โลกร้อนมีผลกระทบอย่างไร', 'line://app/1556091170-PGmJz7y7', 8)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
+$sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
+VALUES (20, '10 วิธีลดโลกร้อน', 'line://app/1556091170-mZRWD4V4', 8)";
+if ($con->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $con->error;
+}
+
 ?>
