@@ -10,4 +10,5 @@ foreach($row as $key){
   //echo $key->keyword_id.' '.$key->keyword.' '.$key->topic.'<br>';
   print_r($key);
 }
+echo '</pre>';
 ?>
