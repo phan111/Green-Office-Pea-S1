@@ -14,6 +14,7 @@ while ( $rows = $resource->fetch_assoc() ) {
     $ans[] = $rows;
     //print_r($rows);//echo "{$row['field']}";
 }
+echo count($ans);
 print_r($ans);
 $resource->free();
 $db->close();
