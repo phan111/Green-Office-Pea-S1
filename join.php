@@ -11,7 +11,7 @@ echo '<pre>';
 $resource = $con->query($sql);
 $ans = array();
 while ( $rows = $resource->fetch_assoc() ) {
-    array_push($ans, $row);
+    $ans[] = $rows;
     //print_r($rows);//echo "{$row['field']}";
 }
 print_r($ans);
