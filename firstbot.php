@@ -79,8 +79,10 @@
 							    "type": "box",
 							    "layout": "vertical",
 							    "spacing": "sm",
-							    "contents": [
-									      {
+							    "contents": [';
+						$count = count($ans);
+						for($i = 0; $i < $count; $i++){
+									$json1 .= '{
 										"type": "button",
 										"style": "primary",
 										"height": "sm",
@@ -89,9 +91,10 @@
 										  "label": "button",
 										  "uri": "line://app/1556091170-O9nZo3E3"
 										}
-						      			     },
+						      			     },';
+						}
      
-									      {
+									      $json1 .= '{
 										"type": "spacer",
 										"size": "sm"
 									      }
