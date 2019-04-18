@@ -88,7 +88,7 @@
 										"height": "sm",
 										"action": {
 										  "type": "uri",
-										  "label": "button",
+										  "label": "'".$ans[$i]['subtopic']."'",
 										  "uri": "line://app/1556091170-O9nZo3E3"
 										}
 						      			     },';
