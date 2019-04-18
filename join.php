@@ -5,6 +5,7 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
         FROM keyword k
         INNER JOIN detail d
         ON k.keyword_id = d.keyword_id
+        WHERE keyword LIKE '%Greenofficeนโยบายกรีน%'
 ";
 echo '<pre>';
 $resource = $con->query($sql);
