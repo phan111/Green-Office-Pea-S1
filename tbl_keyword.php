@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 echo 'tbl_keyword';
-$sql = "SELECT * FROM detail";
+$sql = "SELECT * FROM keyword";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 echo '<pre>';
