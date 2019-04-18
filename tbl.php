@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 echo $_GET['tbl'];
-$sql = "SELECT * FROM ".$_GET['tbl']
+$sql = "SELECT * FROM ".$_GET['tbl'];
 echo '<pre>';
 $resource = $con->query($sql);
 while ( $rows = $resource->fetch_assoc() ) {
