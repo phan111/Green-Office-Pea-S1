@@ -2,7 +2,7 @@
 <?php
 include 'connect.php';
 echo $_GET['tbl'];
-$sql = "SELECT * 
+$sql = "SELECT keyword.keyword_id, keyword.keyword, keyword.topic, detail.detail_id, detail.subtopic, detail.reply 
         FROM keyword 
         INNER JOIN detail 
         ON keyword.keyword_id = detail.keyword_id
