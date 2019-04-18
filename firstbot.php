@@ -122,7 +122,7 @@
 					FROM keyword k
 					INNER JOIN detail d
 					ON k.keyword_id = d.keyword_id
-					WHERE keyword LIKE '%Greenofficeนโยบายกรีน%'
+					WHERE keyword LIKE '%{$txtin}%'
 				";
 				$resource = $con->query($sql);
 				$ans = array();
