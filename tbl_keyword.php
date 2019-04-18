@@ -1,7 +1,7 @@
 <?php
 include 'conncect.php';
 echo 'tbl_keyword';
-$sql = "SELECT * FROM keyword";
+$sql = "SELECT * FROM line_reply";
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 echo '<pre>';
