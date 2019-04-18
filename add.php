@@ -1,28 +1,28 @@
 <?php
 include 'connect.php';
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (9, 'ขยะทั่วไป', 'line://app/1556091170-mJQ0Xr8r', 5)";
+VALUES (13, 'โรงแรมสีเขียว', 'line://app/1556091170-BXpwyLjL', 7)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (10, 'ขยะย่อยสลาย', 'line://app/1556091170-V9oODRmR', 5)";
+VALUES (14, 'ฉลากสินค้า', 'line://app/1556091170-DyZRqdYd', 7)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (11, 'ขยะรีไซเคิล', 'line://app/1556091170-xrJ5zK4K', 5)";
+VALUES (15, 'ฉลากเขียว', 'line://app/1556091170-6r4kb0G0', 7)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
 $sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (12, 'ขยะอันตราย', 'line://app/1556091170-EDlrb141', 5)";
+VALUES (16, 'โรงแรมใบไม้เขียว', 'line://app/1556091170-wan4djNj', 7)";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
