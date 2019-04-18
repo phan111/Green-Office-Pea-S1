@@ -46,9 +46,9 @@
     								"contents": [
       										{
         										"type": "text",
-        										"text": "'.$ans[0]['reply'].'",
+        										"text": "'.$ans[0]['topic'].'",
         										"weight": "bold",
-        										"size": "xl"
+        										"size": "sm"
       										},
       										{
         										"type": "box",
