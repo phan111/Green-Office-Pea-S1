@@ -6,9 +6,7 @@ echo '<pre>';
 $result = $con->query($sql);
 if($result->num_rows>0){
     while ($row = $result->fetch_object()) {
-        foreach ($row as $r){
-            print_r($r);
-        }
+        print_r($row);
     }
 }
 /*$sql = "SELECT * FROM ".$_GET['tbl'];
