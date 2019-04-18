@@ -115,7 +115,7 @@
 				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-				$sql = "SELECT * FROM line_reply WHERE msg LIKE '".$txtin."'";
+				$sql = "SELECT * FROM line_reply WHERE msg = '".$txtin."'";
 				$result = mysqli_query($con, $sql);
 				$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 				$ans = $row['reply'];
