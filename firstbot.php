@@ -50,6 +50,29 @@
         										"weight": "bold",
         										"size": "sm"
       										},
+      										{
+        										"type": "box",
+        										"layout": "vertical",
+        										"margin": "lg",
+        										"spacing": "sm",
+        										"contents": [
+          												{
+            													"type": "box",
+            													"layout": "baseline",
+            													"spacing": "sm",
+            													"contents": [
+															      {
+																"type": "text",
+																"text": "...",
+																"wrap": true,
+																"color": "#d4ed89",
+																"size": "md",
+																"flex": 5
+															      }
+            														   ]
+          												}
+        											   ]
+      										}
     									]
   							},
 						  "footer": {
@@ -112,4 +135,3 @@
 		}
 	}
 	echo "BOT OK";
-	
