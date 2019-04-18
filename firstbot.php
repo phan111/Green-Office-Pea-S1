@@ -63,7 +63,7 @@
             													"contents": [
 															      {
 																"type": "text",
-																"text": "",
+																"text": "...",
 																"wrap": true,
 																"color": "#d4ed89",
 																"size": "md",
