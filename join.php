@@ -4,7 +4,7 @@ include 'connect.php';
 $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
         FROM keyword k
         INNER JOIN detail d
-        ON keyword.keyword_id = detail.keyword_id
+        ON k.keyword_id = d.keyword_id
 ";
 echo '<pre>';
 $resource = $con->query($sql);
