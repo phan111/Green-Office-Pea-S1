@@ -1,5 +1,5 @@
 <?php
-include 'conncect.php';
+include 'connect.php';
 echo 'tbl_keyword';
 $sql = "SELECT * FROM line_reply";
 $result = mysqli_query($con, $sql);
