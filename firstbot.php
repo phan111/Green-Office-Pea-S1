@@ -119,7 +119,7 @@
 				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				if (strpos($txtin, '#') !== false) {
-					$trimmed = chop($txtin, "#");
+					$trimmed = str_replace('#', '', $txtin);
 					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
 						FROM keyword k
 						INNER JOIN detail d
