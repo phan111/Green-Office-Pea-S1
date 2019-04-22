@@ -74,7 +74,7 @@
         "layout": "vertical",
         "spacing": "sm",
         "contents": [
-	for($i=0;$i<$count;$i++){}
+	for($i=0;$i<$count;$i++){
 	
 	    {
             "type": "button",
