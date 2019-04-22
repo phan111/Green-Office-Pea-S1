@@ -48,7 +48,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Title",
+            "text": "'.$ans[0]['topic'].'",
             "wrap": true,
             "weight": "bold",
             "size": "md"
@@ -84,12 +84,11 @@
             "style": "primary",
             "action": {
               "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
+              "label": "'.$ans[$i]['subtopic'].'",
+              "uri": "'.$ans[$i]['reply'].'"
             }
           }
 	';
-	$countp = $count-1;
 	if($i<$count-1){$json1.=',';}	
 	}
 		
