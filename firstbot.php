@@ -77,8 +77,7 @@
 	
 	for($i=0;$i<$count;$i++;){
 		
-		$json1 .= '
-		          {
+		$json1 .= '{
             "type": "button",
             "style": "primary",
             "action": {
