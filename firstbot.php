@@ -48,7 +48,7 @@
         										"type": "text",
         										"text": "'.$ans[0]['topic'].'",
         										"weight": "bold",
-        										"size": "sm"
+        										"size": "md"
       										},
       										{
         										"type": "box",
