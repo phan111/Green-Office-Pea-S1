@@ -138,41 +138,23 @@
         "type": "box",
         "layout": "vertical",
         "spacing": "sm",
-        "contents": [
-          {
+        "contents": [';
+	for($i=0;$i<$count;$i++){
+		
+	$json1 .='
+	{
             "type": "button",
-            "flex": 2,
             "style": "primary",
-            "color": "#aaaaaa",
             "action": {
               "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          },
-          {
-            "type": "button",
-            "flex": 2,
-            "style": "primary",
-            "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          },
-          {
-            "type": "button",
-            "flex": 2,
-            "style": "primary",
-            "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
+              "label": "'.$ans[$i]['subtopic'].'",
+              "uri": "https://drive.google.com/file/d/1zjElFQoQrpvLACUSlnSZTTqbmaZfOvzY/view?usp=sharing"
             }
           }
-        ]
+	';
+	if($i<$count-1){$json1.=',';}	
+	}
+        $json1 .= ']
       }
     }
   ]
