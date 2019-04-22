@@ -28,7 +28,7 @@
 				"type":"flex",
 				"altText":"การโต้ตอบของบอท",
 				"contents":{
-  						{
+  						
   "type": "carousel",
   "contents": [
     {
@@ -186,6 +186,6 @@
     }
   ]
 }
-		}
+		
 	}
 	echo "BOT OK";
