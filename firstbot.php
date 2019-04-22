@@ -25,7 +25,7 @@
 	}
 	function flex_msg($ans)
 	{
-	$json1 = '{{
+	$json1 = '{
   "type": "carousel",
   "contents": [
     {
@@ -181,7 +181,7 @@
       }
     }
   ]
-}}';
+}';
 	$result = json_decode($json1);
 	return $result;
 	}
