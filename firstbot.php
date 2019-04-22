@@ -28,8 +28,7 @@
 				"type":"flex",
 				"altText":"การโต้ตอบของบอท",
 				"contents":{
-  						
-  "type": "carousel",
+  						"type": "carousel",
   "contents": [
     {
       "type": "bubble",
@@ -183,10 +182,41 @@
           }
         ]
       }
-    
+    }
   ]
-}
-		
+	
+				}';
+	$result = json_decode($json1);
+	return $result;
 	}
+	// รับข้อมูล
+	$content = file_get_contents('php://input');//รับข้อมูลจากไลน์
+	$events = json_decode($content, true);//แปลง json เป็น php
+	if (!is_null($events['events'])) //check ค่าในตัวแปร $events
+	{
+		foreach ($events['events'] as $event) {
+			if ($event['type'] == 'message' && $event['message']['type'] == 'text')
+			{
+				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
+				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
+				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
+				if (strpos($txtin, '#') !== false) {
+					$trimmed = str_replace('#', '', $txtin);
+					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
+						FROM keyword k
+						INNER JOIN detail d
+						ON k.keyword_id = d.keyword_id
+						WHERE keyword LIKE '%{$trimmed}%'
+					";
+					$resource = $con->query($sql);
+					$ans = array();
+					while ( $rows = $resource->fetch_assoc() ) {
+					    $ans[] = $rows;
+					    //print_r($rows);//echo "{$row['field']}";
+					}
+					reply_msg($ans, $replyToken);
+				}
+			}
+		}
 	}
 	echo "BOT OK";
