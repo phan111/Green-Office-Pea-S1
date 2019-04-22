@@ -83,24 +83,6 @@
               "label": "Add to Cart",
               "uri": "line://app/1556091170-01BlEQLQ"
             }
-          },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
           }
         ]
       }
