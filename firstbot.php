@@ -26,7 +26,7 @@
 	{
 	$json1 = '{
   "type": "carousel",
-  "contents": 
+  "contents": {
     {
       "type": "bubble",
       "hero": {
@@ -180,7 +180,7 @@
         ]
       }
     }
-  
+  }
 }';
 	$result = json_decode($json1);
 	return $result;
