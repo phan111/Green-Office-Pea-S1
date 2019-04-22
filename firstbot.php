@@ -1,3 +1,21 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@phan111 
+1
+0 0 phan111/Green-Office-Pea-S1
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+Green-Office-Pea-S1/backupo_bot.php
+@phan111 phan111 Update backupo_bot.php
+04fbed6 11 minutes ago
+141 lines (138 sloc)  4.62 KB
+    
 <?php
 	include 'connect.php';
 	function reply_msg($ans,$replyToken)//สร้างข้อความและตอบกลับ
@@ -25,154 +43,85 @@
 	function flex_msg($ans)
 	{
 	$json1 = '{
-  "type": "carousel",
-  "contents": [
-    {
-      "type": "bubble",
-      "hero": {
-        "type": "image",
-        "size": "full",
-        "aspectRatio": "20:13",
-        "aspectMode": "cover",
-        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_5_carousel.png"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "text",
-            "text": "Title",
-            "wrap": true,
-            "weight": "bold",
-            "size": "md"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "text",
-                "text": "มือถือ",
-                "wrap": true,
-                "weight": "bold",
-                "size": "xs",
-                "flex": 0
-              }
-            ]
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-	$count = count($ans);
-	for($i=0;$i<$count;$i++){
+				"type":"flex",
+				"altText":"การโต้ตอบของบอท",
+				"contents":{
+  						"type": "bubble",
+  						"hero": {
+   								 "type": "image",
+    								 "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/Webp.net-resizeimage.png",
+    								 "size": "full",
+      							         "aspectRatio": "16:9",
+    								 "aspectMode": "fit",
+    								 "action": {
+      	   									"type": "uri",
+      										"uri": "line://app/1556091170-O9nZo3E3"
+    									   }
+  							},
+  						"body": {
+    								"type": "box",
+    								"layout": "vertical",
+    								"contents": [
+      										{
+        										"type": "text",
+        										"text": "'.$ans[0]['topic'].'",
+        										"weight": "bold",
+        										"size": "sm"
+      										},
+      										{
+        										"type": "box",
+        										"layout": "vertical",
+        										"margin": "lg",
+        										"spacing": "sm",
+        										"contents": [
+          												{
+            													"type": "box",
+            													"layout": "baseline",
+            													"spacing": "sm",
+            													"contents": [
+															      {
+																"type": "text",
+																"text": "Green Office Bot",
+																"wrap": true,
+																"color": "#d4ed89",
+																"size": "sm",
+																"flex": 5
+															      }
+            														   ]
+          												}
+        											   ]
+      										}
+    									]
+  							},
+						  "footer": {
+							    "type": "box",
+							    "layout": "vertical",
+							    "spacing": "sm",
+							    "contents": [';
+						$count = count($ans);
+						for($i = 0; $i < $count; $i++){
+									$json1 .= '{
+										"type": "button",
+										"style": "primary",
+										"height": "sm",
+										"action": {
+										  "type": "uri",
+										  "label": "'.$ans[$i]['subtopic'].'",
+										  "uri": "'.$ans[$i]['reply'].'"
+										}
+						      			     },';
+						}
+     
+									      $json1 .= '{
+										"type": "spacer",
+										"size": "sm"
+									      }
+    									],
+    							 "flex": 0
+  							}
+				}
 	
-	          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "'.$ans[$i]['reply'].'"
-            }
-          },
-	
-	}//for
-        ]
-      }
-    },
-    {
-      "type": "bubble",
-      "hero": {
-        "type": "image",
-        "size": "full",
-        "aspectRatio": "20:13",
-        "aspectMode": "cover",
-        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_6_carousel.png"
-      },
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "text",
-            "text": "Title",
-            "wrap": true,
-            "weight": "bold",
-            "size": "md"
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "flex": 1,
-            "contents": [
-              {
-                "type": "text",
-                "text": "คอมพิวเตอร์",
-                "wrap": true,
-                "weight": "bold",
-                "size": "xs",
-                "flex": 0
-              }
-            ]
-          }
-        ]
-      },
-      "footer": {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-	
-		for($i=0;$i<$count;$i++){
-	
-	          {
-            "type": "button",
-            "style": "primary",
-	    "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "'.$ans[$i]['reply'].'"
-            }
-          },
-	
-	}//for
-
-                    {
-            "type": "button",
-            "flex": 2,
-            "style": "primary",
-            "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "https://linecorp.com"
-            }
-          },
-                    {
-            "type": "button",
-            "flex": 2,
-            "style": "primary",
-            "color": "#aaaaaa",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "https://linecorp.com"
-            }
-          }
-          
-        ]
-      }
-    }
-  ]
-}';
+				}';
 	$result = json_decode($json1);
 	return $result;
 	}
@@ -207,3 +156,15 @@
 		}
 	}
 	echo "BOT OK";
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
