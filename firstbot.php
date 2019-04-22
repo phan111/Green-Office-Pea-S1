@@ -26,7 +26,8 @@
 	function flex_msg($ans)
 	{
 	$json1 = '{
-				"type":"carousel",
+				"type":"flex",
+				"altText":"การโต้ตอบของบอท",
 				"contents":{
   						"type": "bubble",
   						"hero": {
@@ -48,7 +49,7 @@
         										"type": "text",
         										"text": "'.$ans[0]['topic'].'",
         										"weight": "bold",
-        										"size": "md"
+        										"size": "sm"
       										},
       										{
         										"type": "box",
