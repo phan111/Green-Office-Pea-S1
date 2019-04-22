@@ -32,12 +32,15 @@
   "type": "carousel",
   "contents": [
     {
+  "type": "carousel",
+  "contents": [
+    {
       "type": "bubble",
       "hero": {
         "type": "image",
         "size": "full",
         "aspectRatio": "20:13",
-        "aspectMode": "cover",
+        "aspectMode": "fit",
         "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/mobile.png"
       },
       "body": {
@@ -73,11 +76,8 @@
         "type": "box",
         "layout": "vertical",
         "spacing": "md",
-        "contents": [';
-	$count = count($ans);
-	for($i=0;$i<$count;$i++;){
-		
-		$json1 .= '{
+        "contents": [
+          {
             "type": "button",
             "style": "primary",
             "action": {
@@ -85,11 +85,26 @@
               "label": "Add to Cart",
               "uri": "line://app/1556091170-01BlEQLQ"
             }
-          },';
-		
-	}//for
-
-        $json .= ']
+          },
+          {
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "Add to Cart",
+              "uri": "line://app/1556091170-01BlEQLQ"
+            }
+          },
+          {
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "Add to Cart",
+              "uri": "line://app/1556091170-01BlEQLQ"
+            }
+          }
+        ]
       }
     },
     {
@@ -98,7 +113,7 @@
         "type": "image",
         "size": "full",
         "aspectRatio": "20:13",
-        "aspectMode": "cover",
+        "aspectMode": "fit",
         "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/desktop-monitor%20(1).png"
       },
       "body": {
@@ -172,6 +187,8 @@
         ]
       }
     }
+  ]
+}
   ]
 }
 		}';
