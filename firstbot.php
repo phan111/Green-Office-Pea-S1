@@ -32,13 +32,17 @@
   				  "type": "carousel",
   "contents": [
     {
+      {
+  "type": "carousel",
+  "contents": [
+    {
       "type": "bubble",
       "hero": {
         "type": "image",
         "size": "full",
         "aspectRatio": "20:13",
         "aspectMode": "cover",
-        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/Webp.net-resizeimage.png"
+        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/mobile.png"
       },
       "body": {
         "type": "box",
@@ -47,7 +51,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "'.$ans[0]['topic'].'",
+            "text": "Title",
             "wrap": true,
             "weight": "bold",
             "size": "md"
@@ -72,22 +76,35 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "sm",
+        "spacing": "md",
         "contents": [
-	for($i=0;$i<$count;$i++){
-	
-	    {
+          {
             "type": "button",
             "style": "primary",
             "action": {
               "type": "uri",
-              "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "'.$ans[$i]['reply'].'"
+              "label": "Add to Cart",
+              "uri": "line://app/1556091170-01BlEQLQ"
             }
           },
-	
-          }//for
-            
+          {
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "Add to Cart",
+              "uri": "line://app/1556091170-01BlEQLQ"
+            }
+          },
+          {
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "Add to Cart",
+              "uri": "line://app/1556091170-01BlEQLQ"
+            }
+          }
         ]
       }
     },
@@ -98,7 +115,7 @@
         "size": "full",
         "aspectRatio": "20:13",
         "aspectMode": "cover",
-        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/Webp.net-resizeimage.png"
+        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/desktop-monitor%20(1).png"
       },
       "body": {
         "type": "box",
@@ -168,6 +185,11 @@
               "uri": "line://app/1556091170-01BlEQLQ"
             }
           }
+        ]
+      }
+    }
+  ]
+}
         ]
       }
     }
