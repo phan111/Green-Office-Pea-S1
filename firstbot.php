@@ -32,7 +32,6 @@
   				  "type": "carousel",
   "contents": [
     {
-      {
   "type": "carousel",
   "contents": [
     {
@@ -189,7 +188,7 @@
       }
     }
   ]
-}
+
         ]
       }
     }
