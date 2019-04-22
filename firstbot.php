@@ -26,12 +26,9 @@
 	{
 	$count = count($ans);
 	$json1 = '{
-				"type":"flex",
-				"altText":"การโต้ตอบของบอท",
-				"contents":{
-  				  "type": "carousel",
-  "contents": [
-    {
+			"type":"flex",
+			"altText":"การโต้ตอบของบอท",
+			"contents":{
   "type": "carousel",
   "contents": [
     {
@@ -188,15 +185,8 @@
       }
     }
   ]
-
-        ]
-      }
-    }
-  ]		
-  							
-				}
-	
-				}';
+}
+		}';
 	$result = json_decode($json1);
 	return $result;
 	}
