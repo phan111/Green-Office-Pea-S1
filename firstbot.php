@@ -89,7 +89,7 @@
             }
           }
 	';
-	$countp = $count++;
+	$countp = $count-1;
 	if($i<$countp){$json1.=',';}	
 	}
 		
