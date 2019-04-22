@@ -24,7 +24,7 @@
 	}
 	function flex_msg($ans)
 	{
-	$count = count($ans);
+	
 	$json1 = '{
 			"type":"flex",
 			"altText":"การโต้ตอบของบอท",
@@ -74,7 +74,7 @@
         "layout": "vertical",
         "spacing": "md",
         "contents": [';
-	
+	$count = count($ans);
 	for($i=0;$i<$count;$i++;){
 		
 		$json1 .= '{
