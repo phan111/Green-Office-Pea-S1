@@ -26,7 +26,7 @@
 	{
 	$json1 = '{
 				"type":"flex",
-				"altText":"Green Office",
+				"altText":"การโต้ตอบของบอท",
 				"contents":{
   						"type": "bubble",
   						"hero": {
@@ -46,9 +46,9 @@
     								"contents": [
       										{
         										"type": "text",
-        										"text": "'.$ans.'",
+        										"text": "'.$ans[0]['topic'].'",
         										"weight": "bold",
-        										"size": "xl"
+        										"size": "sm"
       										},
       										{
         										"type": "box",
@@ -63,10 +63,10 @@
             													"contents": [
 															      {
 																"type": "text",
-																"text": "...",
+																"text": "Green Office Bot",
 																"wrap": true,
 																"color": "#d4ed89",
-																"size": "md",
+																"size": "sm",
 																"flex": 5
 															      }
             														   ]
@@ -79,19 +79,22 @@
 							    "type": "box",
 							    "layout": "vertical",
 							    "spacing": "sm",
-							    "contents": [
-									      {
+							    "contents": [';
+						$count = count($ans);
+						for($i = 0; $i < $count; $i++){
+									$json1 .= '{
 										"type": "button",
 										"style": "primary",
 										"height": "sm",
 										"action": {
 										  "type": "uri",
-										  "label": "button",
-										  "uri": "line://app/1556091170-O9nZo3E3"
+										  "label": "'.$ans[$i]['subtopic'].'",
+										  "uri": "'.$ans[$i]['reply'].'"
 										}
-						      			     },
+						      			     },';
+						}
      
-									      {
+									      $json1 .= '{
 										"type": "spacer",
 										"size": "sm"
 									      }
@@ -115,13 +118,23 @@
 				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 				$source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-				$sql = "SELECT * FROM line_reply WHERE msg = '".$txtin."'";
-				$result = mysqli_query($con, $sql);
-				$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-				$ans = $row['reply'];
-				reply_msg($ans, $replyToken);
+				if (strpos($txtin, '#') !== false) {
+					$trimmed = str_replace('#', '', $txtin);
+					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
+						FROM keyword k
+						INNER JOIN detail d
+						ON k.keyword_id = d.keyword_id
+						WHERE keyword LIKE '%{$trimmed}%'
+					";
+					$resource = $con->query($sql);
+					$ans = array();
+					while ( $rows = $resource->fetch_assoc() ) {
+					    $ans[] = $rows;
+					    //print_r($rows);//echo "{$row['field']}";
+					}
+					reply_msg($ans, $replyToken);
+				}
 			}
 		}
 	}
 	echo "BOT OK";
-	
