@@ -111,7 +111,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Title",
+            "text": "'.$ans[0]['topic'].'",
             "wrap": true,
             "weight": "bold",
             "size": "md"
