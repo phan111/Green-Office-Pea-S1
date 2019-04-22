@@ -74,8 +74,12 @@
         "type": "box",
         "layout": "vertical",
         "spacing": "md",
-        "contents": [
-          {
+        "contents": [';
+         $count = count($ans);
+	for($i=0;$i<$count;$i++){
+		
+	$json1 .='
+	{
             "type": "button",
             "style": "primary",
             "action": {
@@ -84,7 +88,11 @@
               "uri": "line://app/1556091170-01BlEQLQ"
             }
           }
-        ]
+	';
+	if($i<$count++){$json1.=',';}	
+	}
+		
+        $json1 .= ']
       }
     },
     {
