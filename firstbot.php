@@ -25,7 +25,10 @@
 	function flex_msg($ans)
 	{
 	$json1 = '{
-  "type": "carousel",
+				"type":"flex",
+				"altText":"การโต้ตอบของบอท",
+				"contents":{
+  				  "type": "carousel",
   "contents": [
     {
       "type": "bubble",
@@ -180,8 +183,11 @@
         ]
       }
     }
-  ]
-}';
+  ]		
+  							
+				}
+	
+				}';
 	$result = json_decode($json1);
 	return $result;
 	}
