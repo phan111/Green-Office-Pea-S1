@@ -90,7 +90,7 @@
           }
 	';
 	$countp = $count-1;
-	if($i<$countp){$json1.=',';}	
+	if($i<$count--){$json1.=',';}	
 	}
 		
         $json1 .= ']
