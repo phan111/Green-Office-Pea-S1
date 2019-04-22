@@ -73,8 +73,12 @@
         "type": "box",
         "layout": "vertical",
         "spacing": "md",
-        "contents": [
-          {
+        "contents": [';
+	
+	for($i=0;$i<$count;$i++;){
+		
+		$json1 .= '
+		          {
             "type": "button",
             "style": "primary",
             "action": {
@@ -82,26 +86,11 @@
               "label": "Add to Cart",
               "uri": "line://app/1556091170-01BlEQLQ"
             }
-          },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          }
-        ]
+          },';
+		
+	}//for
+
+        $json .= ']
       }
     },
     {
