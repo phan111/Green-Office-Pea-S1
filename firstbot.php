@@ -1,22 +1,4 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@phan111 
-1
-0 0 phan111/Green-Office-Pea-S1
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Green-Office-Pea-S1/backupo_bot.php
-@phan111 phan111 Update backupo_bot.php
-04fbed6 11 minutes ago
-141 lines (138 sloc)  4.62 KB
-    
-<?php
+    <?php
 	include 'connect.php';
 	function reply_msg($ans,$replyToken)//สร้างข้อความและตอบกลับ
 	{
