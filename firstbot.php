@@ -24,6 +24,7 @@
 	}
 	function flex_msg($ans)
 	{
+	$count = count($ans);
 	$json1 = '{
 				"type":"flex",
 				"altText":"การโต้ตอบของบอท",
@@ -46,7 +47,7 @@
         "contents": [
           {
             "type": "text",
-            "text": "Title",
+            "text": "'.$ans[0]['topic'].'",
             "wrap": true,
             "weight": "bold",
             "size": "md"
@@ -73,33 +74,20 @@
         "layout": "vertical",
         "spacing": "sm",
         "contents": [
-          {
+	for($i=0;$i<$count;$i++){}
+	
+	    {
             "type": "button",
             "style": "primary",
             "action": {
               "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
+              "label": "'.$ans[$i]['subtopic'].'",
+              "uri": "'.$ans[$i]['reply'].'"
             }
           },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          },
-          {
-            "type": "button",
-            "style": "primary",
-            "action": {
-              "type": "uri",
-              "label": "Add to Cart",
-              "uri": "line://app/1556091170-01BlEQLQ"
-            }
-          }
+	
+          }//for
+            
         ]
       }
     },
