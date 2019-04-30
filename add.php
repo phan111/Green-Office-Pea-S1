@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
-$sql = "INSERT INTO detail (detail_id, subtopic, reply, keyword_id)
-VALUES (29, 'โลโก้และคำขวัญ', 'line://app/1556091170-opYG08v8', 11)";
+$sql = "INSERT INTO detail (keyword_id, keyword, topic)
+VALUES (8, 'Greenofficeก๊าซเรือนกระจกกรีน', 'ก๊าซเรือนกระจก')";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully<br>";
 } else {
