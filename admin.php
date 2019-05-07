@@ -28,14 +28,14 @@
       
        
           </div class="col-4">
-            <label>keyword_id</label>
+            keyword_id
           </div>
           <div class="col-8">
             <input class="form-control" value="<?=$key['keyword_id']?>">
           </div>
       
           </div class="col-4">
-            <label>keyword</label>
+            keyword
           </div>
           <div class="col-8">
             <input class="form-control" value="<?=$key['keyword']?>">
