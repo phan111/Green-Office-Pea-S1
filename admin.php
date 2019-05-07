@@ -28,7 +28,19 @@
   <?php
     echo '<pre>';
     foreach($resource as $key){
-      print_r($key);
+      echo '<form action="#">';
+      
+        echo '<div class="row">';
+          echo '</div class="col-2"><label>keyword_id</label></div>';
+          echo '<div class="col-10"><input class="form-control" value="'.$key->keyword_id.'"></div>';
+        echo '</div>';
+      
+        echo '<div class="row">';
+          echo '</div class="col-2"><label>keyword</label></div>';
+          echo '<div class="col-10"><input class="form-control" value="'.$key->keyword.'"></div>';
+        echo '</div>';
+      
+      echo '</form>';
     }
     $resource->free();
     $db->close();
