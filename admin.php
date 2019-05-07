@@ -51,6 +51,7 @@
         <td><?=$key['reply']?></td>
         <td><?=$key['reply_pc']?></td>
       </tr>
+    <?php
     }  
     ?>
     </tbody>
