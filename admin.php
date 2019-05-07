@@ -29,12 +29,12 @@
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
-        <th class="w-5">keyword_id</th>
-        <th class="w-5">detail_id</th>
-        <th class="w-35">keyword</th>
-        <th class="w-10">topic</th>
-        <th class="w-10">subtopic</th>
-        <th class="w-35">reply</th>
+        <th class="col-1">keyword_id</th>
+        <th class="col-1">detail_id</th>
+        <th class="col-3">keyword</th>
+        <th class="col-2">topic</th>
+        <th class="col-3">subtopic</th>
+        <th class="col-2">reply</th>
       </tr>
     </thead>
     <tbody id="myTable">
