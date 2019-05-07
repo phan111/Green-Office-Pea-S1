@@ -43,13 +43,13 @@
     foreach($resource as $key){
     ?>
       <tr>
-        <td><input type="text" class="form-control" value="<?=$key['keyword_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['detail_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['keyword']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['topic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['subtopic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['reply']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" class="form-control" value="<?=$key['reply_pc']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><a href="#"><?=$key['keyword_id']?></a></td>
+        <td><a href="#"><?=$key['detail_id']?></a></td>
+        <td><a href="#"><?=$key['keyword']?></a></td>
+        <td><a href="#"><?=$key['topic']?></a></td>
+        <td><a href="#"><?=$key['subtopic']?></a></td>
+        <td><a href="#"><?=$key['reply']?></a></td>
+        <td><a href="#"><?=$key['reply_pc']?></a></td>
       </tr>
     <?php
     }  
@@ -63,7 +63,7 @@
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#myTable tr td input").filter(function() {
+    $("#myTable tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
