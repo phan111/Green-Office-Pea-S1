@@ -28,13 +28,13 @@
   <br>
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
-      <tr>
-        <th>keyword_id</th>
-        <th>detail_id</th>
-        <th>keyword</th>
-        <th>topic</th>
-        <th>subtopic</th>
-        <th>reply</th>
+      <tr class="d-flex">
+        <th class="col-1">keyword_id</th>
+        <th class="col-1">detail_id</th>
+        <th class="col-2">keyword</th>
+        <th class="col-3">topic</th>
+        <th class="col-2">subtopic</th>
+        <th class="col-3">reply</th>
       </tr>
     </thead>
     <tbody id="myTable">
