@@ -31,13 +31,21 @@
       <form action="#" method="post">
       
         <div class="row">
-          </div class="col-4"><label>keyword_id</label></div>
-          <div class="col-8"><input class="form-control" value="<?=$key->keyword_id?>"></div>
+          </div class="col-4">
+            <label>keyword_id</label>
+          </div>
+          <div class="col-8">
+            <input class="form-control" value="<?=$key['keyword_id']?>">
+          </div>
         </div>
       
         <div class="row">
-          </div class="col-4"><label>keyword</label></div>
-          <div class="col-8"><input class="form-control" value="<?=$key->keyword?>"></div>
+          </div class="col-4">
+            <label>keyword</label>
+          </div>
+          <div class="col-8">
+            <input class="form-control" value="<?=$key['keyword']?>">
+          </div>
         </div>
       
       </form>
