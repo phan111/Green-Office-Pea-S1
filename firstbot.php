@@ -85,7 +85,7 @@
             "action": {
               "type": "uri",
               "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "'.$ans[$i]['reply'].'"
+              "uri": "line://app/1556091170-01BlEQLQ?url='.$ans[$i]['reply_pc'].'"
             }
           }
 	';
