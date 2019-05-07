@@ -21,34 +21,7 @@
 </head>
 <body>
 
-<div class="container">
-<?php
-    foreach($resource as $key){
-   ?>
-      
-       
-          </div class="col-4">
-            <label>keyword_id</label>
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword_id']?>">
-          </div>
-      
-          </div class="col-4">
-            <label>keyword</label>
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword']?>">
-          </div>
-       
-      
-  <?php
-    }
-    $resource->free();
-    $db->close();
-  ?>
-</div>
-<div class="container">
+
   <div class="row">
     <div class="col-sm-4">
       <h3>Column 1</h3>
