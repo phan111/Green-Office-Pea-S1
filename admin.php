@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Line|GreenOffice</title>
+  <title>Line | Green Office PEA S1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -23,8 +23,7 @@
 <body>
 
 <div class="container mt-3">
-  <h2>Filterable Table</h2>
-  <p>Line : Green Office PEA S1</p>  
+  <h2 class="text-success">Line : Green Office PEA S1</h2>
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
   <table class="table table-bordered">
