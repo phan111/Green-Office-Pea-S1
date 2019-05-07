@@ -22,21 +22,31 @@
 <body>
 
 
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3> 
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-</div>
+<?php
+    foreach($resource as $key){
+   ?>
+      
+       
+          </div class="col-4">
+            <label>keyword_id</label>
+          </div>
+          <div class="col-8">
+            <input class="form-control" value="<?=$key['keyword_id']?>">
+          </div>
+      
+          </div class="col-4">
+            <label>keyword</label>
+          </div>
+          <div class="col-8">
+            <input class="form-control" value="<?=$key['keyword']?>">
+          </div>
+       
+      
+  <?php
+    }
+    $resource->free();
+    $db->close();
+  ?>
 
 </body>
 </html>
