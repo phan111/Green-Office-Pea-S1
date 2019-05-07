@@ -21,32 +21,28 @@
 </head>
 <body>
 
-
+<div class="container">
 <?php
     foreach($resource as $key){
    ?>
-      
-       
-          </div class="col-4">
-            keyword_id
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword_id']?>">
-          </div>
-      
-          </div class="col-4">
-            keyword
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword']?>">
-          </div>
-       
-      
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">keyword_id</span>
+        </div>
+        <input type="text" class="form-control" value="<?=$key['keyword_id']?>">
+      </div>
+  
+       <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">keyword</span>
+        </div>
+        <input type="text" class="form-control" value="<?=$key['keyword']?>">
+      </div>
   <?php
     }
     $resource->free();
     $db->close();
   ?>
-
+</div>
 </body>
 </html>
