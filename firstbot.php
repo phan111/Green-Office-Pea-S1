@@ -148,7 +148,7 @@
             "action": {
               "type": "uri",
               "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "https://drive.google.com/file/d/1omOjXhDpAx9Jtkp36niv_aoAO1FjIdiO/view"
+              "uri": "'.$ans[$i]['reply_pc'].'"
             }
           }
 	';
