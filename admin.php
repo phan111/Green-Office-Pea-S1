@@ -43,13 +43,13 @@
     foreach($resource as $key){
     ?>
       <tr>
-        <td><a href="#"><?=$key['keyword_id']?></a></td>
-        <td><a href="#"><?=$key['detail_id']?></a></td>
-        <td><a href="#"><?=$key['keyword']?></a></td>
-        <td><a href="#"><?=$key['topic']?></a></td>
-        <td><a href="#"><?=$key['subtopic']?></a></td>
-        <td><a href="#"><?=$key['reply']?></a></td>
-        <td><a href="#"><?=$key['reply_pc']?></a></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['keyword_id']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['detail_id']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['keyword']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['topic']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['subtopic']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['reply']?></td>
+        <td data-toggle="modal" data-target="#myModal"><?=$key['reply_pc']?></td>
       </tr>
     <?php
     }  
@@ -58,7 +58,31 @@
   </table>
   
 </div>
-
+ <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
 <script>
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
