@@ -21,28 +21,56 @@
 </head>
 <body>
 
-<div class="container">
-<?php
+<div class="container mt-3">
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>keyword_id</th>
+        <th>detail_id</th>
+        <th>keyword</th>
+        <th>topic</th>
+        <th>subtopic</th>
+        <th>reply</th>
+        <th>reply_pc</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+    <?php
     foreach($resource as $key){
-   ?>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">keyword_id</span>
-        </div>
-        <input type="text" class="form-control" value="<?=$key['keyword_id']?>">
-      </div>
-  
-       <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">keyword</span>
-        </div>
-        <input type="text" class="form-control" value="<?=$key['keyword']?>">
-      </div>
-  <?php
+    ?>
+      <tr>
+        <td><?=$key['keyword_id']?></td>
+        <td><?=$key['detail_id']?></td>
+        <td><?=$key['keyword']?></td>
+        <td><?=$key['topic']?></td>
+        <td><?=$key['subtopic']?></td>
+        <td><?=$key['reply']?></td>
+        <td><?=$key['reply_pc']?></td>
+      </tr>
+    <?php
     }
     $resource->free();
     $db->close();
-  ?>
+    ?>
+    </tbody>
+  </table>
+  
+  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
 </div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </body>
 </html>
