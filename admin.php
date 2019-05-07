@@ -1,7 +1,7 @@
 <?php
   include 'connect.php';
   $sql = '
-    SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply, d.reply_pc
+    SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc
     FROM keyword k
     INNER JOIN detail d
     ON k.keyword_id = d.keyword_id;
@@ -35,7 +35,6 @@
         <th>topic</th>
         <th>subtopic</th>
         <th>reply</th>
-        <th>reply_pc</th>
       </tr>
     </thead>
     <tbody id="myTable">
@@ -48,7 +47,6 @@
         <td><?=$key['keyword']?></td>
         <td><?=$key['topic']?></td>
         <td><?=$key['subtopic']?></td>
-        <td><?=$key['reply']?></td>
         <td><?=$key['reply_pc']?></td>
       </tr>
     <?php
