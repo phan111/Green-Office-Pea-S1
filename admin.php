@@ -43,13 +43,13 @@
     foreach($resource as $key){
     ?>
       <tr>
-        <td><input type="text" value="<?=$key['keyword_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['detail_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['keyword']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['topic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['subtopic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['reply']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
-        <td><input type="text" value="<?=$key['reply_pc']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['keyword_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['detail_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['keyword']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['topic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['subtopic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['reply']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" class="form-control" value="<?=$key['reply_pc']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
       </tr>
     <?php
     }  
