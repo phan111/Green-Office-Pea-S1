@@ -25,37 +25,7 @@
   <h2>Simple Collapsible</h2>
   <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
   <div id="demo" class="collapse">
-  <?php
-    foreach($resource as $key){
-   ?>
-      
-       <div class="row">
-        <form action="#" method="post">
-          
-          </div class="col-4">
-            <label>keyword_id</label>
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword_id']?>">
-          </div>
-        </div>
-      
-        <div class="row">
-          </div class="col-4">
-            <label>keyword</label>
-          </div>
-          <div class="col-8">
-            <input class="form-control" value="<?=$key['keyword']?>">
-          </div>
-  
-        </form>
-       </div>
-      
-  <?php
-    }
-    $resource->free();
-    $db->close();
-  ?>
+    หฟกฟหก
   </div>
 </div>
 
