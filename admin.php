@@ -28,9 +28,10 @@
   <?php
     foreach($resource as $key){
    ?>
-      <form action="#" method="post">
       
-        <div class="row">
+       <div class="row">
+        <form action="#" method="post">
+          
           </div class="col-4">
             <label>keyword_id</label>
           </div>
@@ -46,9 +47,10 @@
           <div class="col-8">
             <input class="form-control" value="<?=$key['keyword']?>">
           </div>
-        </div>
+  
+        </form>
+       </div>
       
-      </form>
   <?php
     }
     $resource->free();
