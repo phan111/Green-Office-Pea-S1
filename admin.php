@@ -26,8 +26,8 @@
   <h2 class="text-success">Line : Green Office PEA S1</h2>
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
       <tr>
         <th>keyword_id</th>
         <th>detail_id</th>
