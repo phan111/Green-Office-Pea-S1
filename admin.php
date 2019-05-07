@@ -1,3 +1,14 @@
+<?php
+  include 'connect.php';
+  $sql = '
+    SELECT k.keyword_id, k.keyword, d.detail_id, d.subtopic, d.reply, d.reply_pc
+    FROM keyword k
+    INNER JOIN detail d
+    ON k.keyword_id = d.keyword_id;
+  ';
+  $resource = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,32 +30,31 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>keyword_id</th>
+        <th>detail_id</th>
+        <th>keyword</th>
+        <th>topic</th>
+        <th>subtopic</th>
+        <th>reply</th>
+        <th>reply_pc</th>
       </tr>
     </thead>
     <tbody id="myTable">
+    <?php
+    foreach($resource as $key){
+    ?>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><?=$key['keyword_id']?></td>
+        <td><?=$key['detail_id']?></td>
+        <td><?=$key['keyword']?></td>
+        <td><?=$key['topic']?></td>
+        <td><?=$key['subtopic']?></td>
+        <td><?=$key['reply']?></td>
+        <td><?=$key['reply_pc']?></td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@mail.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@greatstuff.com</td>
-      </tr>
-      <tr>
-        <td>Anja</td>
-        <td>Ravendale</td>
-        <td>a_r@test.com</td>
-      </tr>
+    <?php
+    }  
+    ?>
     </tbody>
   </table>
   
