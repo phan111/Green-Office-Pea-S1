@@ -53,8 +53,6 @@
       </tr>
     <?php
     }  
-    $resource->free();
-    $db->close();
     ?>
     </tbody>
   </table>
