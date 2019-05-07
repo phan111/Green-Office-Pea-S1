@@ -85,7 +85,7 @@
             "action": {
               "type": "uri",
               "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "line://app/1556091170-01BlEQLQ?url='.$ans[$i]['reply_pc'].'"
+              "uri": "line://app/1556091170-01BlEQLQ?url=".$ans[$i]['reply_pc']
             }
           }
 	';
@@ -148,7 +148,7 @@
             "action": {
               "type": "uri",
               "label": "'.$ans[$i]['subtopic'].'",
-              "uri": "https://drive.google.com/file/d/1zjElFQoQrpvLACUSlnSZTTqbmaZfOvzY/view?usp=sharing"
+              "uri": "'.$ans[$i]['reply_pc'].'"
             }
           }
 	';
