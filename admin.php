@@ -26,25 +26,25 @@
   <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
   <div id="demo" class="collapse">
   <?php
-    echo '<pre>';
     foreach($resource as $key){
-      echo '<form action="#">';
+   ?>
+      <form action="#" method="post">
       
-        echo '<div class="row">';
-          echo '</div class="col-4"><label>keyword_id</label></div>';
-          echo '<div class="col-8"><input class="form-control" value="'.$key->keyword_id.'"></div>';
-        echo '</div>';
+        <div class="row">
+          </div class="col-4"><label>keyword_id</label></div>
+          <div class="col-8"><input class="form-control" value="<?=$key->keyword_id?>"></div>
+        </div>
       
-        echo '<div class="row">';
-          echo '</div class="col-4"><label>keyword</label></div>';
-          echo '<div class="col-8"><input class="form-control" value="'.$key->keyword.'"></div>';
-        echo '</div>';
+        <div class="row">
+          </div class="col-4"><label>keyword</label></div>
+          <div class="col-8"><input class="form-control" value="<?=$key->keyword?>"></div>
+        </div>
       
-      echo '</form>';
+      </form>
+  <?php
     }
     $resource->free();
     $db->close();
-    echo '</pre>';
   ?>
   </div>
 </div>
