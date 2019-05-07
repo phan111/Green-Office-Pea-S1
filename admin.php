@@ -26,7 +26,6 @@
     foreach($resource as $key){
    ?>
       
-       <form action="#" method="post">
        
         <div class="row">
           </div class="col-4">
@@ -46,7 +45,6 @@
           </div>
         </div>
        
-       </form>
       
   <?php
     }
