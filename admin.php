@@ -7,7 +7,7 @@
     ON k.keyword_id = d.keyword_id;
   ';
   $resource = $con->query($sql);
-  $rows = $resource->fetch_assoc()
+  //$rows = $resource->fetch_assoc()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
   <a href="#demo" class="btn btn-primary" data-toggle="collapse">Simple collapsible</a>
   <div id="demo" class="collapse">
   <?php
-    foreach($rows as $key){
+    foreach($resource as $key){
       print_r($key);
     }
     $resource->free();
