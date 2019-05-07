@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Line|GreenOffice</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
 
 <div class="container mt-3">
   <h2>Filterable Table</h2>
-  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+  <p>Line : Green Office PEA S1</p>  
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
   <table class="table table-bordered">
@@ -54,6 +54,8 @@
       </tr>
     <?php
     }  
+    $resource->free();
+    $db->close();
     ?>
     </tbody>
   </table>
