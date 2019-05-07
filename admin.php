@@ -40,49 +40,52 @@
     </thead>
     <tbody id="myTable">
     <?php
+    $ = 0;
     foreach($resource as $key){
     ?>
-      <tr>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['keyword_id']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['detail_id']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['keyword']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['topic']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['subtopic']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['reply']?></td>
-        <td data-toggle="modal" data-target="#myModal"><?=$key['reply_pc']?></td>
+      <tr data-toggle="modal" data-target="#myModal<?=$i?>">
+        <td><?=$key['keyword_id']?></td>
+        <td><?=$key['detail_id']?></td>
+        <td><?=$key['keyword']?></td>
+        <td><?=$key['topic']?></td>
+        <td><?=$key['subtopic']?></td>
+        <td><?=$key['reply']?></td>
+        <td><?=$key['reply_pc']?></td>
       </tr>
+      
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><?=$i?></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
     <?php
+      $i++;
     }  
     ?>
     </tbody>
   </table>
   
 </div>
- <!-- The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
+ 
 <script>
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
