@@ -43,13 +43,13 @@
     foreach($resource as $key){
     ?>
       <tr>
-        <td><?=$key['keyword_id']?></td>
-        <td><?=$key['detail_id']?></td>
-        <td><?=$key['keyword']?></td>
-        <td><?=$key['topic']?></td>
-        <td><?=$key['subtopic']?></td>
-        <td><?=$key['reply']?></td>
-        <td><?=$key['reply_pc']?></td>
+        <td><input type="text" value="<?=$key['keyword_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['detail_id']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['keyword']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['topic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['subtopic']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['reply']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
+        <td><input type="text" value="<?=$key['reply_pc']?>" name="input[]" readonly="true" ondblclick="this.readOnly='';"></td>
       </tr>
     <?php
     }  
@@ -57,7 +57,6 @@
     </tbody>
   </table>
   
-  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
 </div>
 
 <script>
