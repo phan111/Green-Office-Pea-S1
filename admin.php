@@ -4,9 +4,11 @@
     SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc
     FROM keyword k
     INNER JOIN detail d
-    ON k.keyword_id = d.keyword_id;
+    ON k.keyword_id = d.keyword_id
   ';
   $resource = $con->query($sql);
+  $keyword = 'SELECT keyword FROM keyword';
+  $keyword = $con->query($keyword);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,14 @@
 
 <div class="container mt-3">
   <h2 class="text-success">Line : Green Office PEA S1</h2>
+  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Keyword</button>
+  <div id="demo" class="collapse">
+  <?php
+  foreach($keyword as $key){
+    echo '<div class="row">'.$key['keyword'].'</div>';
+  }
+  ?>
+  </div>
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
   <table class="table table-bordered table-hover">
