@@ -29,7 +29,7 @@
   <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
   <div id="demo" class="collapse">
   <?php
-  foreach($keyword as $key){
+  foreach($resource as $key){
     echo '<div class="row">'.$key['keyword'].'</div>';
   }
   ?>
@@ -66,7 +66,12 @@
   </table>
   
 </div>
- 
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
 <script>
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
