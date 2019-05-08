@@ -1,6 +1,6 @@
 <?php
   include 'connect.php';
-  $detail = 'SELECT * FROM detail WHERE keyword_id = '.$_GET['id'].'';
+  $detail = 'SELECT subtopic FROM detail WHERE keyword_id = '.$_GET['id'].'';
   $detail = $con->query($detail);
 ?>
 
