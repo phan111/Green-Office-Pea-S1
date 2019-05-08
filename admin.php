@@ -29,16 +29,8 @@
   <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
   <div id="demo" class="collapse">
   <?php
-  $i = 1;
   foreach($keyword as $key){
-    echo '<div class="row" data-toggle="collapse" data-target="#detail'.$i.'">'.$key['keyword'].'</div>';
-    echo '<div class="collapse" id="detail'.$i.'">';
-      $detail = 'SELECT * FROM detail WHERE keyword_id = '.$key['keyword_id'].'';
-      foreach($detail as $det){
-        echo '<div class="row">'.$det['subtopic'].'</div>;
-      }
-    echo '</div>';
-    $i++;
+    echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'">'.$key['keyword'].'</a></div>';
   }
   ?>
   </div>
