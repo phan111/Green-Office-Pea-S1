@@ -2,8 +2,6 @@
   include 'connect.php';
   $detail = 'SELECT * FROM detail WHERE keyword_id = '.$_GET['id'].'';
   $detail = $con->query($detail);
-  $keyword = 'SELECT * FROM keyword WHERE keyword_id = '.$_GET['id].'';
-  $keyword = $con->query($keyword);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +18,7 @@
 <body>
 
 <div class="container mt-3">
-<h3 class="text-success>หัวข้อย่อยของ <?=$keyword['keyword']?></h3>
+<h3 class="text-success>หัวข้อย่อยของ <?=$_GET['key']?></h3>
 <?php
 foreach(){
   echo '<div class="row">'.$det['subtopic'].'</div>
