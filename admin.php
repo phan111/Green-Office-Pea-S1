@@ -26,7 +26,7 @@
 
 <div class="container mt-3">
   <h2 class="text-success">Line : Green Office PEA S1</h2>
-  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Keyword</button>
+  <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
   <div id="demo" class="collapse">
   <?php
   foreach($keyword as $key){
