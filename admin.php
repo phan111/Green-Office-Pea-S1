@@ -5,7 +5,6 @@
     FROM keyword k
     INNER JOIN detail d
     ON k.keyword_id = d.keyword_id
-    GROUP BY k.keyword
   ';
   $resource = $con->query($sql);
   $keyword = 'SELECT keyword FROM keyword';
