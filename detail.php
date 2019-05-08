@@ -18,7 +18,7 @@
 <body>
 
 <div class="container mt-3">
-  <h3 class="text-success">หัวข้อย่อย Keyword: '.$_GET['key'].'</h3>
+  <h3 class="text-success">หัวข้อย่อย Keyword: <?=$_GET['key']?></h3>
 <?php
 foreach($detail as $det){
   echo '<div class="row">'.$det['subtopic'].'</div>';
