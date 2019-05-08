@@ -5,6 +5,7 @@
     FROM keyword k
     INNER JOIN detail d
     ON k.keyword_id = d.keyword_id
+    GROUP BY k.keyword
   ';
   $resource = $con->query($sql);
   $keyword = 'SELECT keyword FROM keyword';
@@ -29,7 +30,7 @@
   <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
   <div id="demo" class="collapse">
   <?php
-  foreach($resource as $key){
+  foreach($keyword as $key){
     echo '<div class="row">'.$key['keyword'].'</div>';
   }
   ?>
