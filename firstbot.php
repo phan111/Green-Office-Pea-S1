@@ -181,8 +181,7 @@
 						FROM keyword k
 						INNER JOIN detail d
 						ON k.keyword_id = d.keyword_id
-						WHERE keyword LIKE '%{$trimmed}%
-						ORDER BY k.keyword_id ASC'
+						WHERE keyword LIKE '%{$trimmed}%'
 					";
 					$resource = $con->query($sql);
 					$ans = array();
