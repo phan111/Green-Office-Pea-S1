@@ -30,7 +30,7 @@
   <div id="demo" class="collapse">
   <?php
   foreach($keyword as $key){
-    echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'">'.$key['keyword'].'</a></div>';
+    echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'&key='.$key['keyword'].'">'.$key['keyword'].'</a></div>';
   }
   ?>
   </div>
