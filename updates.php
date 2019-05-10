@@ -1,14 +1,14 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE keyword SET 
-		keyword = 'Greenofficeข้อ1นโยบายกรีนสิ่งแวดล้อมกฟต.1กฟภ'
+		keyword = 'Greenofficeข้อ1นโยบายกรีนสิ่งแวดล้อม'
 		WHERE keyword_id = 1;
 $query = mysqli_query($con,$sql);
 if($query) {
  echo "Record update successfully<br>";
 }
 $sql = "UPDATE keyword SET 
-		keyword = 'Greenofficeข้อ2ปัญหาสิ่งแวดล้อมที่มีนัยสำคัญและการจัดการaspectกรีน กฟต.1'
+		keyword = 'Greenofficeข้อ2ปัญหาสิ่งแวดล้อมที่มีนัยสำคัญและการจัดการaspectกรีน'
 		WHERE keyword_id = 2;
 $query = mysqli_query($con,$sql);
 if($query) {
