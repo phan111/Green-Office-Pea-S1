@@ -61,7 +61,7 @@
       <tr>
         <td><input class="form-control" name="keyword_id" value="<?=$key['keyword_id']?>"></td>
         <td><input class="form-control" name="detail_id" value="<?=$key['detail_id']?>"></td>
-        <td><input class="form-control" name="subtopic" value="<?=$key['subtopic']?"></td>
+        <td><input class="form-control" name="subtopic" value="<?=$key['subtopic']?>"></td>
         <td><input class="form-control" name="reply_pc" value="<?=$key['reply_pc']?>"></td>
         <td><input type="submit" class="btn btn-success" value="แก้ไข"></td>
       </tr>
