@@ -4,10 +4,10 @@
     SELECT *
     FROM detail
   ';
-  $max = 'SELECT MAX(detail_id)
-          FROM detail';
+  $result = mysql_query("SELECT MAX(detail_id) AS det_max FROM detail");
+  $row = mysql_fetch_array($result);
+  echo $row["det_max"];
   $resource = $con->query($sql);
-  $max = $con->query($max);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,6 @@
   ?>
   </div>
   <form action="insert_detail">
-    <?php print_r($max); ?>
     <div class="row">
       <div class="col-6">keyword_id</div>
       <div class="col-6"><input type="text" class="form-control" name="keyword_id"></div>
