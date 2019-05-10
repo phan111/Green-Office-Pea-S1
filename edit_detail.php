@@ -40,6 +40,7 @@
       <div class="col-6"><input type="text" class="form-control" name="subtopic"></div>
       <div class="col-6">reply_pc</div>
       <div class="col-6"><input type="text" class="form-control" name="reply_pc"></div>
+      <div class="col-12"><input type="submit" value="ตกลง"></div>
     </div>
   </form>
   <br>
