@@ -34,7 +34,7 @@
   ?>
   </div>
   <form action="insert_detail">
-    <?=$max?>
+    <?php print_r($max); ?>
     <div class="row">
       <div class="col-6">keyword_id</div>
       <div class="col-6"><input type="text" class="form-control" name="keyword_id"></div>
