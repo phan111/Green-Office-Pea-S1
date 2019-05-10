@@ -50,10 +50,10 @@
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
-        <th class="col-1">keyword_id</th>
-        <th class="col-1">detail_id</th>
-        <th class="col-3">subtopic</th>
-        <th class="col-2">reply_pc</th>
+        <th>keyword_id</th>
+        <th>detail_id</th>
+        <th>subtopic</th>
+        <th>reply_pc</th>
         <th></th>
       </tr>
     </thead>
