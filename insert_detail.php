@@ -1,4 +1,5 @@
 <?php
+include 'connect.php';
 echo '<pre>';
 print_r($_GET);
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
