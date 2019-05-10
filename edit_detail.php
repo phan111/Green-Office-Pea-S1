@@ -4,9 +4,6 @@
     SELECT *
     FROM detail
   ';
-  $result = mysql_query("SELECT MAX(detail_id) AS det_max FROM detail");
-  $row = mysql_fetch_array($result);
-  echo $row["det_max"];
   $resource = $con->query($sql);
 ?>
 
