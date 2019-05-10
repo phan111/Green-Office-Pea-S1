@@ -15,7 +15,7 @@ if($query) {
  echo "Record update successfully<br>";
 }
 $sql = "UPDATE keyword SET 
-		keyword = 'Greenofficeข้อ3กฎหมายกรีนการปฎิบัติตามข้อกำหนดด้านสิ่งแวดล้อมต่างๆที่เกี่ยวข้องใกล้ตัวช่องทางค้นคว้าอัคคีภัยแสงเสียงเขตสูบบุหรี่'
+		keyword = 'Greenofficeข้อ3กฎหมายกฏหมายกรีนการปฎิบัติตามข้อกำหนดด้านสิ่งแวดล้อมต่างๆที่เกี่ยวข้องใกล้ตัวช่องทางค้นคว้าอัคคีภัยแสงเสียงเขตสูบบุหรี่'
 		WHERE keyword_id = 3";
 $query = mysqli_query($con,$sql);
 if($query) {
