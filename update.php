@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = 'UPDATE detail
-        SET reply = "line://app/1556091170-O9nZo3E3"
-        WHERE keyword_id = 1';
+        SET keyword_id = 10
+        WHERE detail_id = 42';
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully";
 } else {
