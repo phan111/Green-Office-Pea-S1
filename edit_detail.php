@@ -32,14 +32,14 @@
   </div>
   <form action="insert_detail">
     <div class="row">
-      <div class="col-6>keyword_id</div>
-      <div class="col-6><input type="text" class="form-control" name="keyword_id"></div>
-      <div class="col-6>detail_id</div>
-      <div class="col-6><input type="text" class="form-control" name="detail_id"></div>
-      <div class="col-6>subtopic</div>
-      <div class="col-6><input type="text" class="form-control" name="subtopic"></div>
-      <div class="col-6>reply_pc</div>
-      <div class="col-6><input type="text" class="form-control" name="reply_pc"></div>
+      <div class="col-6">keyword_id</div>
+      <div class="col-6"><input type="text" class="form-control" name="keyword_id"></div>
+      <div class="col-6">detail_id</div>
+      <div class="col-6"><input type="text" class="form-control" name="detail_id"></div>
+      <div class="col-6">subtopic</div>
+      <div class="col-6"><input type="text" class="form-control" name="subtopic"></div>
+      <div class="col-6">reply_pc</div>
+      <div class="col-6"><input type="text" class="form-control" name="reply_pc"></div>
     </div>
   </form>
   <br>
