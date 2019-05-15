@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = 'UPDATE detail
-        SET keyword_id = 10
-        WHERE detail_id = 42';
+        SET reply_pc = 'https://drive.google.com/file/d/1zCa4BeWOVaTLsmuix_BAFxF6eIlCXQIT/view?usp=sharing'
+        WHERE detail_id = 33';
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully";
 } else {
