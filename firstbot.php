@@ -59,7 +59,7 @@
             "contents": [
               {
                 "type": "text",
-                "color": "#d4ed89",
+                "color": "#009933",
                 "text": "มือถือ",
                 "wrap": true,
                 "weight": "bold",
@@ -123,7 +123,7 @@
             "contents": [
               {
                 "type": "text",
-                "color": "#d4ed89",
+                "color": "#009933",
                 "text": "คอมพิวเตอร์",
                 "wrap": true,
                 "weight": "bold",
