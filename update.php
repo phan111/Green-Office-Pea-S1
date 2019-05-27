@@ -3,7 +3,7 @@ include 'connect.php';
 $sql = 'UPDATE keyword
         SET keyword = "Greenofficeข้อ1นโยบายกรีน",
         topic = "นโยบายสิ่งแวดล้อม"
-        WHERE detail_id = 1';
+        WHERE keyword_id = 1';
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
