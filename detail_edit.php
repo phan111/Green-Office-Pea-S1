@@ -56,7 +56,7 @@
     </div>
     <div class="row mt-1">
       <div class="col-2">Reply</div>
-      <div class="col-10"><textarea class="form-control" name="keyword"><?=$keyw['reply_pc']?></textarea></div>
+      <div class="col-10"><textarea class="form-control" name="reply_pc"><?=$keyw['reply_pc']?></textarea></div>
     </div>
     <div class="row">
       <div class="col-12"><input type="submit" class="btn btn-success" value="บันทึก" ืname="submit"></div>
