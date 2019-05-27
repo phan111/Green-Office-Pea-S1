@@ -78,7 +78,7 @@ $(document).ready(function() {
     if ($con->query($sql) === TRUE) {
         echo "Record updated successfully";
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "Error updating record: " . $con->error;
     }
   }
 ?>
