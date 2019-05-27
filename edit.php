@@ -9,7 +9,7 @@ echo $sql = '
 if (mysqli_query($con, $sql)) {
   echo 'yes';
 } else {
-  echo 'no';
+  echo "Error updating record: " . mysqli_error($conn);
 }
 mysqli_close($con);
 ?>
