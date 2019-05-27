@@ -11,6 +11,7 @@
   $keyword = $con->query($keyword);
   $keyw = 'SELECT * FROM keyword WHERE keyword_id = '.$_GET['id'].'';
   $keyw = $con->query($keyw);
+  $keyw = mysqli_fetch_assoc($keyw);
 ?>
 <!DOCTYPE html>
 <html lang="en">
