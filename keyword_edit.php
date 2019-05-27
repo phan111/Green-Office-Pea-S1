@@ -13,6 +13,18 @@
   $keyw = $con->query($keyw);
   $keyw = mysqli_fetch_assoc($keyw);
 ?>
+<?php
+  if(isset($_POST['submit'])){
+    $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
+    if ($con->query($sql) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+        echo "Error updating record: " . $con->error;
+    }
+    print_r($_POST);
+    print_r($_GET);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,15 +85,3 @@ $(document).ready(function() {
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>
-<?php
-  if(isset($_POST['submit'])){
-    $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
-    if ($con->query($sql) === TRUE) {
-        echo "Record updated successfully";
-    } else {
-        echo "Error updating record: " . $con->error;
-    }
-    print_r($_POST);
-    print_r($_GET);
-  }
-?>
