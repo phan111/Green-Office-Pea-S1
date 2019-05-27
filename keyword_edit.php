@@ -52,7 +52,7 @@
     </div>
       <div class="row mt-2">
       <div class="col-2">Topic</div>
-      <div class="col-10"><input class="form-control" value="<?=$keyw['topic']?>"></div>
+      <div class="col-10"><input class="form-control" value="<?=$keyw['topic']?>" name="topic"></div>
     </div>
     <div class="row mt-1">
       <div class="col-2">Keyword</div>
