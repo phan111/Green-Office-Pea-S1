@@ -62,7 +62,6 @@
       <div class="col-12"><input type="submit" class="btn btn-success" value="บันทึก" ืname="submit"></div>
     </div>
     <input type="hidden" name="id" value="<?=$_GET['id']?>">
-    <input type="hidden" name="table" value="keyword">
   </form>
 </div>
 
