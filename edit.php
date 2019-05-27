@@ -2,8 +2,8 @@
 include 'connect.php';
 echo $sql = '
   UPDATE '.$_POST['table'].'
-  SET topic = '.$_POST['topic'].',
-  keyword = '.$_POST['keyword'].'
+  SET topic = "'.$_POST['topic'].'",
+  keyword = "'.$_POST['keyword'].'"
   WHERE keyword_id = '.$_POST['id'].'
 ';
 if (mysqli_query($con, $sql)) {
