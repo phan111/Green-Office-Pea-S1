@@ -48,7 +48,7 @@
     echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'&key='.$key['keyword'].'">'.$key['keyword'].'</a></div>';
   }
   ?>
-  <form method="post">
+  <form action="https://green-office-peas1.herokuapp.com/edit.php" method="post">
     </div>
       <div class="row mt-2">
       <div class="col-2">Topic</div>
@@ -61,6 +61,8 @@
     <div class="row">
       <div class="col-12"><input type="submit" class="btn btn-success" value="บันทึก" ืname="submit"></div>
     </div>
+    <input type="hidden" name="id" value="<?=$_GET['id']?>">
+    <input type="hidden" name="table" value="keyword">
   </form>
 </div>
 
@@ -74,10 +76,3 @@ $(document).ready(function() {
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>
-<?php
-  if(isset($_POST['submit'])){
-
-    print_r($_POST);
-    print_r($_GET);
-  }
-?>
