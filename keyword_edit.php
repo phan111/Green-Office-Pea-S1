@@ -49,9 +49,8 @@
   ?>
   </div>
   <div class="row">
-  <?php print_r($keyw); ?>
     <div class="col-2">Keyword</div>
-    <div class="col-10"><input class="form-control" name="keyword" value=""></div>
+    <div class="col-10"><input class="form-control" name="keyword" value="<?=$keyw['keyword']?>"></div>
   </div>
   
 </div>
