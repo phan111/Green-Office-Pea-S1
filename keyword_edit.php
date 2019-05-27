@@ -48,11 +48,14 @@
   }
   ?>
   </div>
-  <div class="row">
+  <div class="row mt-2">
     <div class="col-2">Keyword</div>
     <div class="col-10"><input class="form-control" name="keyword" value="<?=$keyw['keyword']?>"></div>
   </div>
-  
+  <div class="row">
+    <div class="col-2">Topic</div>
+    <div class="col-10"><input class="form-control" value="<?=$keyw['topic']?>"></div>
+  </div>
 </div>
 <script>
 $(document).ready(function() {
