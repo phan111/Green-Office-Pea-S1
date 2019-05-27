@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-if(isset($_POST['keyword']){
+if(!empty($_POST['keyword']){
 $sql = '
   UPDATE '.$_POST['table'].'
   SET topic = "'.$_POST['topic'].'",
