@@ -77,9 +77,9 @@ $(document).ready(function() {
 <?php
   if(isset($_POST['submit'])){
     $sql = 'UPDATE keyword
-            SET keyword = ".$_POST['keyword'].",
-            topic = ".$_POST['topic']."
-            WHERE keyword_id = '.$_GET['id'].';
+            SET keyword = '".$_POST['keyword']."',
+            topic = '".$_POST['topic']."'
+            WHERE keyword_id = '".$_GET['id']."';
     if (mysqli_query($con, $sql)) {
        echo "Record updated successfully<br>";
     } else {
