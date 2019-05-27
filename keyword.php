@@ -61,9 +61,9 @@
         foreach($keyw as $key){
         ?>
           <tr>
-            <td><?=$key['keyword_id'];?></td>
-            <td><?=$key['keyword'];?></td>
-            <td><?=$key['topic'];?></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/keyword_edit.php?id=<?=$key['keyword_id']?>"><?=$key['keyword_id'];?></a></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/keyword_edit.php?id=<?=$key['keyword_id']?>"><?=$key['keyword'];?></a></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/keyword_edit.php?id=<?=$key['keyword_id']?>"><?=$key['topic'];?></a></td>
           </tr>
         <?php
         }
