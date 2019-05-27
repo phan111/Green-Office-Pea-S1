@@ -39,7 +39,7 @@
     <a class="nav-link active" href="https://green-office-peas1.herokuapp.com/keyword.php">แก้ไข Keyword</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="https://green-office-peas1.herokuapp.com/detail.php">แก้ไขรายละเอียด</a>
+    <a class="nav-link" href="https://green-office-peas1.herokuapp.com/detail.php">แก้ไขรายละเอียด</a>
   </li>
 </ul>
   <div id="demo" class="col-12 collapse">
