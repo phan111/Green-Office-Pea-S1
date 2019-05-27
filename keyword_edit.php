@@ -74,8 +74,8 @@ $(document).ready(function() {
 </html>
 <?php
   if(isset($_POST)){
-    $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = "'.$_GET['id']."'";
-    if ($conn->query($sql) === TRUE) {
+    $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
+    if ($con->query($sql) === TRUE) {
         echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $conn->error;
