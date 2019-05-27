@@ -59,7 +59,6 @@
         <tbody>
         <?php
         foreach($keyw as $key){
-          print_r($key);
         ?>
           <tr>
             <td><?=$key['keyword_id'];?></td>
