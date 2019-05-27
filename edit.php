@@ -7,9 +7,9 @@ echo $sql = '
   WHERE keyword_id = '.$_POST['id'].'
 ';
 if (mysqli_query($con, $sql)) {
-   echo "<script>alert('เสร็จสิ้น');window.location = 'https://green-office-peas1.herokuapp.com/keyword.php';</script>";
+  echo 'yes';
 } else {
-   echo "<script>alert("Error updating record: " . mysqli_error($conn));window.location = 'https://green-office-peas1.herokuapp.com/keyword.php';</script>";
+  echo 'no';
 }
 mysqli_close($con);
 ?>
