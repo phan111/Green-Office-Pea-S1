@@ -1,9 +1,17 @@
 <?php
   include 'connect.php';
-  $detail = 'SELECT subtopic FROM detail WHERE keyword_id = '.$_GET['id'].'';
-  $detail = $con->query($detail);
+  $sql = '
+    SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc
+    FROM keyword k
+    INNER JOIN detail d
+    ON k.keyword_id = d.keyword_id
+  ';
+  $resource = $con->query($sql);
+  $keyword = 'SELECT keyword, keyword_id FROM keyword';
+  $keyword = $con->query($keyword);
+  $keyw = 'SELECT * FROM detail';
+  $keyw = $con->query($keyw);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,16 +23,72 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
 
 <div class="container mt-3">
-  <h3 class="text-success">หัวข้อย่อย Keyword: <?=$_GET['key']?></h3>
-<?php
-foreach($detail as $det){
-  echo '<div class="row">'.$det['subtopic'].'</div>';
-}
-?>
+  <h2 class="text-success">Line : Green Office PEA S1</h2>
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="https://green-office-peas1.herokuapp.com/admin.php">หน้าแรก</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#demo">Keyword</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://green-office-peas1.herokuapp.com/keyword.php">แก้ไข Keyword</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="https://green-office-peas1.herokuapp.com/detail.php">แก้ไขรายละเอียด</a>
+  </li>
+</ul>
+  <div id="demo" class="col-12 collapse">
+  <?php
+  foreach($keyword as $key){
+    echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'&key='.$key['keyword'].'">'.$key['keyword'].'</a></div>';
+  }
+  ?>
+  </div>
+  
+ <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>detail_id</th>
+                <th>keyword_id</th>
+                <th>subtopic</th>
+                <th>reply</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach($keyw as $key){
+        ?>
+          <tr>
+            <td><a href="https://green-office-peas1.herokuapp.com/detail_edit.php?id=<?=$key['detail_id']?>"><?=$key['detail_id'];?></a></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/detail_edit.php?id=<?=$key['detail_id']?>"><?=$key['keyword_id'];?></a></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/detail_edit.php?id=<?=$key['detail_id']?>"><?=$key['subtopic'];?></a></td>
+            <td><a href="https://green-office-peas1.herokuapp.com/detail_edit.php?id=<?=$key['detail_id']?>"><?=$key['reply_pc'];?></a></td>
+          </tr>
+        <?php
+        }
+        ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>detail_id</th>
+                <th>keyword_id</th>
+                <th>subtopic</th>
+                <th>reply</th>
+            </tr>
+        </tfoot>
+    </table>
+  
 </div>
-
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>
