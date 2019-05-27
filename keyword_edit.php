@@ -74,11 +74,13 @@ $(document).ready(function() {
 </html>
 <?php
   if(isset($_POST['submit'])){
-    $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
+    /*$sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
     if ($con->query($sql) === TRUE) {
         echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $con->error;
-    }
+    }*/
+    print_r($_POST);
+    print_r($_GET);
   }
 ?>
