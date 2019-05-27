@@ -40,8 +40,7 @@
     <a class="nav-link disabled" href="#">Disabled</a>
   </li>
 </ul>
-  <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
-  <div id="demo" class="collapse">
+  <div id="demo" class="col-12 collapse">
   <?php
   foreach($keyword as $key){
     echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'&key='.$key['keyword'].'">'.$key['keyword'].'</a></div>';
