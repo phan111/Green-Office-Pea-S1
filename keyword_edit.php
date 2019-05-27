@@ -58,7 +58,7 @@
       <div class="col-10"><textarea class="form-control" name="keyword"><?=$keyw['keyword']?></textarea></div>
     </div>
     <div class="row">
-      <div class="col-12"><input type="submit" class="btn btn-success" value="บันทึก"></div>
+      <div class="col-12"><input type="submit" class="btn btn-success" value="บันทึก" ืname="submit"></div>
     </div>
   </form>
 </div>
@@ -73,7 +73,7 @@ $(document).ready(function() {
 </body>
 </html>
 <?php
-  if(isset($_POST)){
+  if(isset($_POST['submit'])){
     $sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
     if ($con->query($sql) === TRUE) {
         echo "Record updated successfully";
