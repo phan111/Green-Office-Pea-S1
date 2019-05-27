@@ -48,7 +48,7 @@
     echo '<div class="row"><a href="https://green-office-peas1.herokuapp.com/detail.php?id='.$key['keyword_id'].'&key='.$key['keyword'].'">'.$key['keyword'].'</a></div>';
   }
   ?>
-  <form action="https://green-office-peas1.herokuapp.com/edit.php" method="post">
+  <form action="https://green-office-peas1.herokuapp.com/keyword_update.php" method="post">
     </div>
       <div class="row mt-2">
       <div class="col-2">Topic</div>
