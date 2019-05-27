@@ -7,9 +7,9 @@ echo $sql = '
   WHERE keyword_id = '.$_POST['id'].'
 ';
 if (mysqli_query($con, $sql)) {
-  echo 'yes';
+  echo "<script>alert('เสร็จสิ้น');window.location = 'edit.php';</script>";
 } else {
-  echo "Error updating record: " . mysqli_error($conn);
+  echo "<script>alert('ผิดพลาด กรุณาลองใหม่');window.location = 'edit.php';</script>";
 }
 mysqli_close($con);
 ?>
