@@ -59,11 +59,13 @@
         <tbody>
         <?php
         foreach($key as $key){
+        ?>
           <tr>
             <td><?=$key['keyword_id'];?></td>
             <td><?=$key['keyword'];?></td>
             <td><?=$key['topic'];?></td>
           </tr>
+        <?php
         }
         ?>
         </tbody>
