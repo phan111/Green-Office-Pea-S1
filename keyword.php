@@ -9,6 +9,8 @@
   $resource = $con->query($sql);
   $keyword = 'SELECT keyword, keyword_id FROM keyword';
   $keyword = $con->query($keyword);
+  $key = 'SELECT * FROM keyword';
+  $key $con->query($key);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,32 +52,27 @@
  <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>keyword_id</th>
+                <th>keyword</th>
+                <th>topic</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
+        <?php
+        foreach($key as $key){
+          <tr>
+            <td><?=$key['keyword_id'];?></td>
+            <td><?=$key['keyword'];?></td>
+            <td><?=$key['topic'];?></td>
+          </tr>
+        }
+        ?>
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>keyword_id</th>
+                <th>keyword</th>
+                <th>topic</th>
             </tr>
         </tfoot>
     </table>
