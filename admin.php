@@ -26,6 +26,20 @@
 
 <div class="container mt-3">
   <h2 class="text-success">Line : Green Office PEA S1</h2>
+  <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">หน้าแรก</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#demo">Keyword</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
   <button type="button" class="btn btn-primary mb-3" data-toggle="collapse" data-target="#demo">Keyword</button>
   <div id="demo" class="collapse">
   <?php
