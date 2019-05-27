@@ -10,7 +10,7 @@
   $keyword = 'SELECT keyword, keyword_id FROM keyword';
   $keyword = $con->query($keyword);
   $key = 'SELECT * FROM keyword';
-  $key $con->query($key);
+  $key = $con->query($key);
 ?>
 <!DOCTYPE html>
 <html lang="en">
