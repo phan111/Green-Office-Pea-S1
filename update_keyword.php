@@ -1,13 +1,11 @@
 <?php
 include 'connect.php';
-if(!empty($_POST['keyword']){
 $sql = '
   UPDATE '.$_POST['table'].'
   SET topic = "'.$_POST['topic'].'",
   keyword = "'.$_POST['keyword'].'"
   WHERE keyword_id = '.$_POST['id'].'
 ';
-}
 if (mysqli_query($con, $sql)) {
   echo "<script>alert('เสร็จสิ้น');window.location = 'keyword.php';</script>";
 } else {
