@@ -28,16 +28,16 @@
   <h2 class="text-success">Line : Green Office PEA S1</h2>
   <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#">หน้าแรก</a>
+    <a class="nav-link active" href="https://green-office-peas1.herokuapp.com/admin.php">หน้าแรก</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#" data-toggle="collapse" data-target="#demo">Keyword</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="https://green-office-peas1.herokuapp.com/keyword.php">แก้ไข Keyword</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
+    <a class="nav-link disabled" href="https://green-office-peas1.herokuapp.com/detail.php">แก้ไขรายละเอียด</a>
   </li>
 </ul>
   <div id="demo" class="col-12 collapse">
