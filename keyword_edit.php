@@ -62,17 +62,7 @@
     </div>
   </form>
 </div>
-<script>
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
-</script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-</body>
-</html>
-<?php
+  <?php
   if(isset($_POST['submit'])){
     /*$sql = "UPDATE keyword SET keyword = '".$_POST['keyword']."', topic = '".$_POST['topic']."' WHERE keyword_id = '".$_GET['id']."'";
     if ($con->query($sql) === TRUE) {
@@ -84,3 +74,14 @@ $(document).ready(function() {
     print_r($_GET);
   }
 ?>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+</body>
+</html>
+
