@@ -107,7 +107,7 @@
       "body": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "md",
+        "spacing": "sm",
         "contents": [
           {
             "type": "text",
