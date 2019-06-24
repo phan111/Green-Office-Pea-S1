@@ -1,9 +1,8 @@
 <?php
 include 'connect.php';
-$sql = 'UPDATE keyword
-        SET keyword = "Greenofficeข้อ1นโยบายกรีน",
-        topic = "นโยบายสิ่งแวดล้อม"
-        WHERE keyword_id = 1';
+$sql = 'UPDATE detail
+        SET reply_pc = "https://drive.google.com/file/d/17_v30KSY0RHrW1_0V5QkrMrQfJB-ARAE/view?usp=sharing",
+        WHERE detail_id = 2';
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
