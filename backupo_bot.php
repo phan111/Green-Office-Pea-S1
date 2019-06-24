@@ -24,86 +24,143 @@
 	}
 	function flex_msg($ans)
 	{
-	$json1 = '{
-				"type":"flex",
-				"altText":"การโต้ตอบของบอท",
-				"contents":{
-  						"type": "bubble",
-  						"hero": {
-   								 "type": "image",
-    								 "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/Webp.net-resizeimage.png",
-    								 "size": "full",
-      							         "aspectRatio": "16:9",
-    								 "aspectMode": "fit",
-    								 "action": {
-      	   									"type": "uri",
-      										"uri": "line://app/1556091170-O9nZo3E3"
-    									   }
-  							},
-  						"body": {
-    								"type": "box",
-    								"layout": "vertical",
-    								"contents": [
-      										{
-        										"type": "text",
-        										"text": "'.$ans[0]['topic'].'",
-        										"weight": "bold",
-        										"size": "sm"
-      										},
-      										{
-        										"type": "box",
-        										"layout": "vertical",
-        										"margin": "lg",
-        										"spacing": "sm",
-        										"contents": [
-          												{
-            													"type": "box",
-            													"layout": "baseline",
-            													"spacing": "sm",
-            													"contents": [
-															      {
-																"type": "text",
-																"text": "Green Office Bot",
-																"wrap": true,
-																"color": "#d4ed89",
-																"size": "sm",
-																"flex": 5
-															      }
-            														   ]
-          												}
-        											   ]
-      										}
-    									]
-  							},
-						  "footer": {
-							    "type": "box",
-							    "layout": "vertical",
-							    "spacing": "sm",
-							    "contents": [';
-						$count = count($ans);
-						for($i = 0; $i < $count; $i++){
-									$json1 .= '{
-										"type": "button",
-										"style": "primary",
-										"height": "sm",
-										"action": {
-										  "type": "uri",
-										  "label": "'.$ans[$i]['subtopic'].'",
-										  "uri": "'.$ans[$i]['reply'].'"
-										}
-						      			     },';
-						}
-     
-									      $json1 .= '{
-										"type": "spacer",
-										"size": "sm"
-									      }
-    									],
-    							 "flex": 0
-  							}
-				}
 	
-				}';
+	$json1 = '{
+			"type":"flex",
+			"altText":"การโต้ตอบของบอท",
+			"contents":
+			{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "fit",
+        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/mobile.png"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": "'.$ans[0]['topic'].'",
+            "wrap": true,
+            "weight": "bold",
+            "size": "md"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "text",
+                "color": "#009933",
+                "text": "มือถือ",
+                "wrap": true,
+                "weight": "bold",
+                "size": "xs",
+                "flex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "md",
+        "contents": [';
+         $count = count($ans);
+	for($i=0;$i<$count;$i++){
+		
+	$json1 .='
+	{
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "'.$ans[$i]['subtopic'].'",
+              "uri": "line://app/1556091170-01BlEQLQ?url='.$ans[$i]['reply_pc'].'"
+            }
+          }
+	';
+	if($i<$count-1){$json1.=',';}	
+	}
+		
+        $json1 .= ']
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "fit",
+        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/desktop-monitor%20(1).png"
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "text",
+            "text": "'.$ans[0]['topic'].'",
+            "wrap": true,
+            "weight": "bold",
+            "size": "md"
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "flex": 1,
+            "contents": [
+              {
+                "type": "text",
+                "color": "#009933",
+                "text": "คอมพิวเตอร์",
+                "wrap": true,
+                "weight": "bold",
+                "size": "xs",
+                "flex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [';
+	for($i=0;$i<$count;$i++){
+		
+	$json1 .='
+	{
+            "type": "button",
+            "style": "primary",
+            "action": {
+              "type": "uri",
+              "label": "'.$ans[$i]['subtopic'].'",
+              "uri": "'.$ans[$i]['reply_pc'].'"
+            }
+          }
+	';
+	if($i<$count-1){$json1.=',';}	
+	}
+        $json1 .= ']
+      }
+    }
+  ]
+}
+  
+		}';
 	$result = json_decode($json1);
 	return $result;
 	}
@@ -120,7 +177,7 @@
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				if (strpos($txtin, '#') !== false) {
 					$trimmed = str_replace('#', '', $txtin);
-					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply 
+					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
 						FROM keyword k
 						INNER JOIN detail d
 						ON k.keyword_id = d.keyword_id
