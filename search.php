@@ -11,5 +11,6 @@ $ans = array();
 while ( $rows = $resource->fetch_assoc() ) {
     $ans[] = $rows;
     print_r($rows);
+	echo '<a href="'.$rows['reply_pc'].'">'.$rows['topic'].'</a>';
 }
 ?>
