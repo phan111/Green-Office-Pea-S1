@@ -137,7 +137,7 @@
       "footer": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "sm",
+        "spacing": "md",
         "contents": [';
 	for($i=0;$i<$count;$i++){
 		
