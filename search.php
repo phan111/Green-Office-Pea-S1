@@ -18,9 +18,11 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 	WHERE keyword LIKE '%{$_GET['key']}%'
 ";
 $resource = $con->query($sql);
+echo '<div class="container mt-1">';
 while ($rows = $resource->fetch_assoc()) {
 	echo '<div class="row mb-1 d-flex justify-content-center">';
-		echo '<a class=" col-12 btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+		echo '<a class=" col-12 btn btn-success pl-5 pr-5" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 	echo '</div>';
 }
+echo '</div>';
 ?>
