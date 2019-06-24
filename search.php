@@ -1,3 +1,11 @@
+<style>
+a{
+	background:#00cc00;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 5px;
+}
+</style>
 <?php
 include 'connect.php';
 $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
