@@ -21,7 +21,7 @@ $resource = $con->query($sql);
 echo '<div class="container mt-1">';
 while ($rows = $resource->fetch_assoc()) {
 	echo '<div class="row mb-1 d-flex justify-content-center">';
-		echo '<a class=" col-12 btn btn-success pl-5 pr-5" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+		echo '<a class=" col-12 btn btn-success ml-3 mr-3" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 	echo '</div>';
 }
 echo '</div>';
