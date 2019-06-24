@@ -7,8 +7,10 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 	WHERE keyword LIKE '%{$_GET['key']}%'
 ";
 $resource = $con->query($sql);
+$rows = $resource->fetch_assoc();
+$count = 
 $ans = array();
-while ( $rows = $resource->fetch_assoc() ) {
-	echo '<a href="'.$rows['reply_pc'].'">'.$rows['topic'].'</a><br>';
+while ($rows) {
+	echo '<a href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 }
 ?>
