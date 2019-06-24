@@ -19,6 +19,8 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 ";
 $resource = $con->query($sql);
 while ($rows = $resource->fetch_assoc()) {
-	echo '<a class="btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+	echo '<div class="row">';
+		echo '<a class="btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+	echo '</div>';
 }
 ?>
