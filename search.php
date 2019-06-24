@@ -20,8 +20,8 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 $resource = $con->query($sql);
 echo '<div class="container mt-1">';
 while ($rows = $resource->fetch_assoc()) {
-	echo '<div class="row mb-1 d-flex justify-content-center">';
-		echo '<a class=" col-12 btn btn-success ml-3 mr-3" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+	echo '<div class="row mb-1 d-flex justify-content-center ml-3 mr-3">';
+		echo '<a class=" col-12 btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 	echo '</div>';
 }
 echo '</div>';
