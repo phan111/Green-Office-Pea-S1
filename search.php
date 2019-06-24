@@ -8,8 +8,6 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 ";
 $resource = $con->query($sql);
 $rows = $resource->fetch_assoc();
-$count = 
-$ans = array();
 while ($rows) {
 	echo '<a href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 }
