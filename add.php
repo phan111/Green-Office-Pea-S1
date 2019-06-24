@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
-$sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (7, 45, 'อุปกรณ์สำนักงาน 9 รายการ (1)', 'https://drive.google.com/file/d/14OBJoQUgk9xHwUmGRbDSYMlbtSJh1-Lc/view?usp=sharing')";
+$sql = "INSERT INTO keyword (keyword_id, keyword, topic)
+VALUES (13, 'Greenofficeแผนป้องกันและระงับอัคคีภัยกฟต.1กรีน', 'แผนป้องกันและระงับอัคคีภัยกฟต.1')";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully<br>";
 } else {
