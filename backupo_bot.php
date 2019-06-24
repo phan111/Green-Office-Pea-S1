@@ -56,6 +56,7 @@
           {
             "type": "box",
             "layout": "baseline",
+	    "flex": 1,
             "contents": [
               {
                 "type": "text",
