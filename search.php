@@ -9,8 +9,6 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 $resource = $con->query($sql);
 $ans = array();
 while ( $rows = $resource->fetch_assoc() ) {
-    $ans[] = $rows;
-    print_r($rows);
-	echo '<a href="'.$rows['reply_pc'].'">'.$rows['topic'].'</a>';
+	echo '<a href="'.$rows['reply_pc'].'">'.$rows['topic'].'</a><br>';
 }
 ?>
