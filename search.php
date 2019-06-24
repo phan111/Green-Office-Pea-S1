@@ -20,7 +20,7 @@ $sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.repl
 $resource = $con->query($sql);
 while ($rows = $resource->fetch_assoc()) {
 	echo '<div class="row mb-1 d-flex justify-content-center">';
-		echo '<a class="btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
+		echo '<a class=" col-12 btn btn-success" href="'.$rows['reply_pc'].'">'.$rows['subtopic'].'</a><br>';
 	echo '</div>';
 }
 ?>
