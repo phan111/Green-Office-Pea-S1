@@ -2,7 +2,7 @@
 include 'connect.php';
 
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (13, 56, 'แผนผังขั้นตอนการปฏิบัติเมื่อเกิดเพลิงไหม้', 'https://drive.google.com/file/d/1YJv3Mb62MsHw6p7fDUC4H8XWG7q07Y0r/view?usp=sharing')";
+VALUES (10, 58, 'ไม้ประดับดูดสารพิษ', 'https://drive.google.com/file/d/11izhwZcrbFIxccdpMYM6CAGaJ7cA0-Oh/view?usp=sharing')";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully<br>";
 } else {
@@ -10,7 +10,7 @@ if ($con->query($sql) === TRUE) {
 }
 
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (13, 57, 'วิธีการใช้ถังดับเพลิง', 'https://drive.google.com/file/d/1FM3X-Q0d58VsX1B_JICr9181tHu23uJL/view?usp=sharing')";
+VALUES (13, 59, 'แผนผังทางหนีไฟ', 'https://drive.google.com/file/d/1Yi3bHZCYoUTX9xaK3jiK_QGTHtxAhoa1/view?usp=sharing')";
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully<br>";
 } else {
