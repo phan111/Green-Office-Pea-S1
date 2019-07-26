@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE detail
-SET subtopic = 'ฉลากสินค้าและบริการ', reply_pc = "https://drive.google.com/file/d/1AdYZAagTE6rmq4Qp1mA01MtnIbUvYmrM/view?usp=sharing"
+SET subtopic = 'ฉลากสินค้าและบริการ'
 WHERE detail_id = 14";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
