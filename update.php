@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1SU4z085Q5fZZW-seUa4an7H0egmDUfGi/view?usp=sharing'
-WHERE detail_id = 1";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก เม.ย.'
+WHERE detail_id = 68";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -10,8 +10,8 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1BxW-HUQAqAu0hYeckGtQdYlF6HBLrAL9/view?usp=sharing'
-WHERE detail_id = 63";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก พ.ค.'
+WHERE detail_id = 69";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -19,8 +19,8 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1aaovfPahpJNWfZNIoZV8UnasEKZ7lV04/view?usp=sharing'
-WHERE detail_id = 24";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก มิ.ย.'
+WHERE detail_id = 70";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -28,8 +28,8 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1Rs2pNY83SXzEGs2d0TXvr49HEDNACgoS/view?usp=sharing'
-WHERE detail_id = 64";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก ก.ค.'
+WHERE detail_id = 71";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -37,8 +37,8 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1BxW-HUQAqAu0hYeckGtQdYlF6HBLrAL9/view?usp=sharing'
-WHERE detail_id = 63";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก ส.ค.'
+WHERE detail_id = 72";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -46,8 +46,8 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1HfCuhmW5GVl7Zw6VTYkFtJ3V7MeqkQFn/view?usp=sharing'
-WHERE detail_id = 5";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก ก.ย.'
+WHERE detail_id = 73";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
@@ -55,40 +55,14 @@ if (mysqli_query($con, $sql)) {
 }
 
 $sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1PSSthz8liTO8tzf4TM28Ls3gz8d_3Rs_/view?usp=sharing'
-WHERE detail_id = 6";
+SET subtopic = 'ผลการเกิดก๊าซเรือนกระจก ต.ค.'
+WHERE detail_id = 74";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
    echo "Error updating record: " . mysqli_error($conn);
 }
 
-$sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/12al9qbpR6C_KPblhwfxsZZGZZJbbxf-m/view?usp=sharing'
-WHERE detail_id = 7";
-if (mysqli_query($con, $sql)) {
-   echo "Record updated successfully<br>";
-} else {
-   echo "Error updating record: " . mysqli_error($conn);
-}
-
-$sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1ZKw61ANVXBLswVYFk3ZaQvrshq6KsLhH/view?usp=sharing'
-WHERE detail_id = 26";
-if (mysqli_query($con, $sql)) {
-   echo "Record updated successfully<br>";
-} else {
-   echo "Error updating record: " . mysqli_error($conn);
-}
-
-$sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1mQ-Wyl53nykQn5jd2joZaaGHzI4aU4gV/view?usp=sharing'
-WHERE detail_id = 27";
-if (mysqli_query($con, $sql)) {
-   echo "Record updated successfully<br>";
-} else {
-   echo "Error updating record: " . mysqli_error($conn);
-}
 
 
 
