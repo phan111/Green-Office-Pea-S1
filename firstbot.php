@@ -182,6 +182,7 @@
 						INNER JOIN detail d
 						ON k.keyword_id = d.keyword_id
 						WHERE keyword LIKE '%{$trimmed}%'
+						ORDER BY subtopic ASC;
 					";
 					$resource = $con->query($sql);
 					$ans = array();
