@@ -4,7 +4,7 @@ echo '<pre>';
 
 
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (14, 98, 'โครงการบ่อบำบัดน้ำเสีย', 'https://drive.google.com/drive/u/1/folders/1jTFi7c2x5yi0n9QY5LlGnc6ZTAqg5FFP')";
+VALUES (14, 98, 'รณรงค์การลดขยะ', 'https://drive.google.com/open?id=1BZZLs3SoS_VyfQ6l1iHB6UcGNdE3GkOR')";
 
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
@@ -12,15 +12,5 @@ if (mysqli_query($con, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-
-
-/*$sql = "INSERT INTO keyword (keyword_id, keyword, topic)
-VALUES (14, 'Greenofficeโครงการบริหารจัดการน้ำเสียภายในพื้นที่สำนักงาน กฟต.1.', 'โครงการบริหารจัดการน้ำเสียภายในพื้นที่สำนักงาน กฟต.1.')";
-
-if (mysqli_query($con, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}*/
 
 ?>
