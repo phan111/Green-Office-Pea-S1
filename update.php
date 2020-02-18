@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE detail
-SET keyword_id = 5
-WHERE detail_id = 65";
+SET subtopic = "แก้วกักเก็บความเย็น"
+WHERE detail_id = 97";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
