@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-$sql = 'DELETE FROM detail WHERE detail_id > 59';
+$sql = 'DELETE FROM detail WHERE detail_id = 118';
 if ($con->query($sql) === TRUE) {
     echo "New record created successfully<br>";
 } else {
