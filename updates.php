@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE detail
-SET subtopic = 'มาตรการควบคุมมลภาวะของเสียง'
-WHERE detail_id = 123";
+SET reply_pc = 'https://drive.google.com/file/d/1IgiLWArgrpqxPTx-H3Qw0aQzL7RmOE9s/view?usp=sharing'
+WHERE detail_id = 22";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
