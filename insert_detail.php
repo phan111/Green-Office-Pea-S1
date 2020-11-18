@@ -11,7 +11,7 @@ if (mysqli_query($con, $sql)) {
 }*/
 
 $sql = "INSERT INTO keyword (keyword_id, keyword, topic)
-VALUES (15, 123, 'คณะกรรมการฝ่ายบริหารคณะทีมงาน', 'คณะกรรมการ')";
+VALUES (15, 'คณะกรรมการฝ่ายบริหารคณะทีมงาน', 'คณะกรรมการ')";
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
 } else {
