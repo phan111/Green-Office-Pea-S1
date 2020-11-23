@@ -177,23 +177,35 @@
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				if (strpos($txtin, '#') !== false) {
 					if($txtin == '#'){
-						$trimmed = '';
+						$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
+						FROM keyword k
+						INNER JOIN detail d
+						ON k.keyword_id = d.keyword_id;
+						";
+						$resource = $con->query($sql);
+						$ans = array();
+						while ( $rows = $resource->fetch_assoc() ) {
+						    $ans[] = $rows;
+						    //print_r($rows);//echo "{$row['field']}";
+						}
+						reply_msg($ans, $replyToken);
 					}else{
 						$trimmed = str_replace('#', '', $txtin);
-					}
-					$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
+						$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
 						FROM keyword k
 						INNER JOIN detail d
 						ON k.keyword_id = d.keyword_id
 						WHERE keyword LIKE '%{$trimmed}%';
-					";
-					$resource = $con->query($sql);
-					$ans = array();
-					while ( $rows = $resource->fetch_assoc() ) {
-					    $ans[] = $rows;
-					    //print_r($rows);//echo "{$row['field']}";
+						";
+						$resource = $con->query($sql);
+						$ans = array();
+						while ( $rows = $resource->fetch_assoc() ) {
+						    $ans[] = $rows;
+						    //print_r($rows);//echo "{$row['field']}";
+						}
+						reply_msg($ans, $replyToken);
 					}
-					reply_msg($ans, $replyToken);
+
 				}
 			}
 		}
