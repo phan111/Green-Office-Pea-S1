@@ -177,7 +177,7 @@
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				if (strpos($txtin, '#') !== false) {
 					if($txtin == '#'){
-						$trimmed = ' ';
+						$trimmed = '';
 					}else{
 						$trimmed = str_replace('#', '', $txtin);
 					}
