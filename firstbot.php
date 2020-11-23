@@ -177,11 +177,7 @@
 				$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 				if (strpos($txtin, '#') !== false) {
 					if($txtin == '#'){
-						$sql = "SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc 
-						FROM keyword k
-						INNER JOIN detail d
-						ON k.keyword_id = d.keyword_id;
-						";
+						$sql = "SELECT * FROM detail";
 						$resource = $con->query($sql);
 						$ans = array();
 						while ( $rows = $resource->fetch_assoc() ) {
