@@ -184,6 +184,7 @@
 						    $ans[] = $rows;
 						    //print_r($rows);//echo "{$row['field']}";
 						}
+						$ans[0]['topic'] = 'ทั้งหมด';
 						reply_msg($ans, $replyToken);
 					}else{
 						$trimmed = str_replace('#', '', $txtin);
