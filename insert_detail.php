@@ -3,7 +3,7 @@ include 'connect.php';
 echo '<pre>';
 
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (3, 124, 'บัญชีทะเบียนกฎหมายและข้อกำหนดด้านสิ่งแวดล้อม', 'https://drive.google.com/file/d/19GFZy3rn7I4H-UFKygFteqTeVOZfsKjl/view?usp=sharing')";
+VALUES (2, 125, 'คำค้นหา', 'https://drive.google.com/file/d/19GFZy3rn7I4H-UFKygFteqTeVOZfsKjl/view?usp=sharing')";
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
 } else {
