@@ -3,7 +3,15 @@ include 'connect.php';
 echo '<pre>';
 
 $sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
-VALUES (4, 126, 'มาตรการสำหรับสถานที่เฉพาะ', 'https://drive.google.com/file/d/12pTbnuetBJB3WdozWqmY-VZh1B9o0FHm/view?usp=sharing')";
+VALUES (4, 127, 'การจัดประชุม อบรม สัมนา กฟต.1', 'https://drive.google.com/file/d/1xsCyXVTA0Kw5d-IPtuDNW_hKCXeDb4S-/view?usp=sharing')";
+if (mysqli_query($con, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO detail (keyword_id, detail_id, subtopic, reply_pc)
+VALUES (3, 128, 'กฎหมายที่เกี่ยวข้อง', 'https://drive.google.com/file/d/16kvnHiwFtUdPMldCXyiST0EXeqR5qlEl/view?usp=sharing')";
 if (mysqli_query($con, $sql)) {
     echo "New record created successfully";
 } else {
