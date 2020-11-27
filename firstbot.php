@@ -183,7 +183,7 @@
 					INNER JOIN detail d
 					ON k.keyword_id = d.keyword_id
 					WHERE keyword LIKE '%{$trimmed}%'
-					OR d.detail_id = 125;
+					OR d.detail_id = 999;
 					";
 					$resource = $con->query($sql);
 					$ans = array();
