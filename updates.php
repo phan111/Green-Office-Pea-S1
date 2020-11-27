@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
 $sql = "UPDATE detail
-SET detail_id = 999
-WHERE detail_id = 125";
+SET detail_id = 127
+WHERE subtopic = 'การจัดประชุม อบรม สัมนา'";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
