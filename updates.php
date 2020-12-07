@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
-$sql = "UPDATE detail
-SET detail_id = 127
-WHERE subtopic = 'การจัดประชุม อบรม สัมนา'";
+$sql = "UPDATE keyword
+SET topic = 'โครงการภายในพื้นที่สำนักงาน กฟต.1.'
+WHERE keyword_id = 14";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
