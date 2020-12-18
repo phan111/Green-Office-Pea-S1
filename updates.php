@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
-$sql = "UPDATE keyword
-SET topic = 'โครงการภายในพื้นที่สำนักงาน กฟต.1.'
-WHERE keyword_id = 14";
+$sql = "UPDATE detail
+SET reply_pc = 'https://drive.google.com/file/d/1crz-pKHBeYQUA3ec_zsR4hYDmxkEyySd/view?usp=sharing'
+WHERE detail_id = 63";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
