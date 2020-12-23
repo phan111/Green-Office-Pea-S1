@@ -1,8 +1,8 @@
 <?php
 include 'connect.php';
-$sql = "UPDATE detail
-SET reply_pc = 'https://drive.google.com/file/d/1crz-pKHBeYQUA3ec_zsR4hYDmxkEyySd/view?usp=sharing'
-WHERE detail_id = 63";
+$sql = "UPDATE keyword
+SET keyword = 'Greenofficeข้อ9ทีมงานและอำนาจหน้าที่แต่ละหมวดกรีนคณะกรรมการฝ่ายบริหารผลลัพธ์การประชุมnine'
+WHERE keyword_id = 6";
 if (mysqli_query($con, $sql)) {
    echo "Record updated successfully<br>";
 } else {
