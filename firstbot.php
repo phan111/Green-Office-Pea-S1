@@ -39,7 +39,7 @@
         "size": "full",
         "aspectRatio": "20:13",
         "aspectMode": "fit",
-        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/mobile.png"
+        "url": "https://github.com/phan111/Green-Office-Pea-S1/blob/master/mobile.png?raw=true"
       },
       "body": {
         "type": "box",
@@ -102,7 +102,7 @@
         "size": "full",
         "aspectRatio": "20:13",
         "aspectMode": "fit",
-        "url": "https://raw.githubusercontent.com/phan111/Green-Office-Pea-S1/master/desktop-monitor%20(1).png"
+        "url": "https://github.com/phan111/Green-Office-Pea-S1/blob/master/desktop-monitor%20(1).png?raw=true"
       },
       "body": {
         "type": "box",
