@@ -17,7 +17,7 @@
           $resource = $con->query($sql);
           $keyword = 'SELECT keyword, keyword_id FROM keyword';
           $keyword = $con->query($keyword);
-          $keyw = 'SELECT * FROM keyword';
+          $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
           foreach($keyw AS $key){
             print_r($key);
