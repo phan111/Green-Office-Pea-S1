@@ -1,4 +1,7 @@
-<?php
-print_r($_GET);
-  echo file_get_contents($_GET['url']);
-?>
+<html>
+  <head></head>
+  <body>
+      <input type="text">
+      <input type="submit">
+  </body>
+</html>
