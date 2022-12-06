@@ -17,7 +17,7 @@
 
         if ($result = $mysqli -> query($sql)) {
           while ($row = $result -> fetch_row()) {
-            printf ($row);
+            print_r($row);
           }
           $result -> free_result();
         }
