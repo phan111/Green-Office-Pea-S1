@@ -8,6 +8,21 @@
       </form>
       <?php
       if(isset($_GET['word'])){
+        if ($con -> connect_errno) {
+          echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+          exit();
+        }
+
+        $sql = "SELECT * FROM keyword";
+
+        if ($result = $mysqli -> query($sql)) {
+          while ($row = $result -> fetch_row()) {
+            printf ("%s (%s)\n", $row[0], $row[1]);
+          }
+          $result -> free_result();
+        }
+
+        $mysqli -> close();
         print_r($_GET);
       }
       ?>
