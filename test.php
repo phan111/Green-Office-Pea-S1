@@ -8,21 +8,20 @@
       </form>
       <?php
       if(isset($_GET['word'])){
-        if ($con -> connect_errno) {
-          echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-          exit();
-        }
-
-        $sql = "SELECT * FROM keyword";
-
-        if ($result = $mysqli -> query($sql)) {
-          while ($row = $result -> fetch_row()) {
-            print_r($row);
+          $sql = '
+            SELECT k.keyword_id, k.keyword, k.topic, d.detail_id, d.subtopic, d.reply_pc
+            FROM keyword k
+            INNER JOIN detail d
+            ON k.keyword_id = d.keyword_id
+          ';
+          $resource = $con->query($sql);
+          $keyword = 'SELECT keyword, keyword_id FROM keyword';
+          $keyword = $con->query($keyword);
+          $keyw = 'SELECT * FROM keyword';
+          $keyw = $con->query($keyw);
+          foreach($keyw AS $key){
+            print_r($key);
           }
-          $result -> free_result();
-        }
-
-        $mysqli -> close();
         print_r($_GET);
       }
       ?>
