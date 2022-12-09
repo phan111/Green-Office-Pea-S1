@@ -50,15 +50,14 @@
           $keyword = $con->query($keyword);
           $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
+          echo '<i align="center">'.$_GET["word"].'</i>';
           foreach($resource AS $key){
           ?>
             <div class="btn" align="center" onclick="javascript:location.href='<?=$key['reply_pc']?>'"><b>
           <?php
             echo $key['subtopic'];
             echo '</b></div>';
-            //print_r($key);
           }
-        print_r($_GET);
       }
       ?>
   </body>
