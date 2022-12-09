@@ -20,7 +20,7 @@
           $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
           echo "<pre>";
-          foreach($keyw AS $key){
+          foreach($resource AS $key){
             print_r($key);
           }
         print_r($_GET);
