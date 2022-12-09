@@ -7,7 +7,7 @@
         color : white;
         border-radius : 5px;
         margin-bottom : 10px;
-        padding : 0 10 0 10
+        padding : 0 10 0 10;
       }
     </style>
   </head>
