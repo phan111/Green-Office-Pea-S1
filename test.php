@@ -31,7 +31,7 @@
           $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
           foreach($resource AS $key){
-            echo '<div class="btn" align="center" onclick="javascript:location.href='."$key['reply_pc']".'"><b>';
+            echo '<div class="btn" align="center" onclick="javascript:location.href='".$key['reply_pc']."'"><b>';
             echo $key['subtopic'];
             echo '</b></div>';
             //print_r($key);
