@@ -13,6 +13,7 @@
             FROM keyword k
             INNER JOIN detail d
             ON k.keyword_id = d.keyword_id
+            WHERE k.keyword LIKE "%'.$_GET['word'].'%"
           ';
           $resource = $con->query($sql);
           $keyword = 'SELECT keyword, keyword_id FROM keyword';
