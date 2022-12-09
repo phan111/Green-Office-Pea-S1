@@ -32,7 +32,7 @@
             echo '<div class="btn" align="center">';
             echo $key->subtopic;
             echo '</div>';
-            //print_r($key);
+            print_r($key);
           }
         print_r($_GET);
       }
