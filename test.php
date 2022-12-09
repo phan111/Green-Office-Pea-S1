@@ -5,7 +5,8 @@
       .btn{
         background : #37B21C;
         color : white;
-        border-radiant : 5px;
+        border-radius : 5px;
+        margin-bottom : 10px;
       }
     </style>
   </head>
