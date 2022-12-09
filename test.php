@@ -7,6 +7,7 @@
         color : white;
         border-radius : 5px;
         margin-bottom : 10px;
+        padding : 0 10 0 10
       }
     </style>
   </head>
@@ -30,9 +31,9 @@
           $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
           foreach($resource AS $key){
-            echo '<div class="btn" align="center">';
+            echo '<div class="btn" align="center"><b>';
             echo $key['subtopic'];
-            echo '</div>';
+            echo '</b></div>';
             //print_r($key);
           }
         print_r($_GET);
