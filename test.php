@@ -1,6 +1,14 @@
 <?php include 'connect.php' ?>
 <html>
-  <head></head>
+  <head>
+    <style>
+      .btn{
+        background : #37B21C;
+        color : white;
+        border-radiant : 5px;
+      }
+    </style>
+  </head>
   <body>
       <form action="#" method="get">
         <input type="text" name="word">
@@ -20,9 +28,11 @@
           $keyword = $con->query($keyword);
           $keyw = 'SELECT * FROM keyword WHERE keyword LIKE "%'.$_GET['word'].'%"';
           $keyw = $con->query($keyw);
-          echo "<pre>";
           foreach($resource AS $key){
-            print_r($key);
+            echo '<div class="btn" align="center">';
+            echo $key->subtopic;
+            echo '</div>';
+            //print_r($key);
           }
         print_r($_GET);
       }
