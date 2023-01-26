@@ -30,8 +30,9 @@
       cursor: pointer;
     }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body style="width:100vw;">
+  <body>
       <form action="#" method="get">
         <input type="text" name="word">
         <input type="submit" value="ค้นหา">
