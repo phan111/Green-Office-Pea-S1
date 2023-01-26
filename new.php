@@ -31,7 +31,7 @@
     }
     </style>
   </head>
-  <body>
+  <body style="width:100vw;">
       <form action="#" method="get">
         <input type="text" name="word">
         <input type="submit" value="ค้นหา">
